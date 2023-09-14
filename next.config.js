@@ -13,6 +13,8 @@ const nextConfig = {
     });
     return config;
   },
+  // these redirects also need to be declared in /public/_redirects for netlify
+  // ive kept a copy of them here in case we end up dropping netlify at some point
   async redirects() {
     // prettier-ignore
     return [
