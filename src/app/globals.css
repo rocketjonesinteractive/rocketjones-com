@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --color-red: #ED1C24;
+    --color-red-rgb: 237, 28, 36;
+    --color-grey: #767676;
+    --color-grey-light: #F7F7F7;
+    --color-grey-outline: #DEE2E6;
+    --color-grey-border: #D1D1D1;
+    --header-height: 90px;
+}
+
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 60px;
+    }
+}
+
+::selection {
+    color: white;
+    background: rgba(var(--color-red-rgb), 0.5);
+}
+
+.promise ::selection {
+    color: black;
+    background: rgba(255,255,255, 0.5);
+}
+
+html {
+    /* to offset sticky header */
+    scroll-padding-top: calc(var(--header-height) - 1px);
+}
+
+.boxed {
+    position: relative;
+    padding: 2rem;
+    transition: background-color .5s;
+    background: transparent;
+}
+
+.boxed:hover {
+    opacity: 1;
+}
+
+.boxed:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.boxed::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    transform: scale(0,1);
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
+}
+
+.boxed:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.boxed::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    transform: scale(1,0);
+    border-right: 2px solid #333;
+    border-left: 2px solid #333;
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
+}
+
+.bg-red-pattern {
+    background-color: #ed1c24;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d51920' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}

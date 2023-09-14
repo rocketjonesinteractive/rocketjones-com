@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rocket Jones Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id='controls'>
+    <button class='btn' id='btn-home'>Home</button>
+    <button class='btn' id='btn-about'>About</button>
+    <button class='btn' id='btn-process'>Process</button>
+    <button class='btn' id='btn-technology'>Technology</button>
+    <button class='btn' id='btn-contact'>Get Started</button>
+</div>
+<div id="desktop-wrap">
+    <img src="img/frame-desktop.png" width="1467" height="1217" />
+    <iframe id="desktop-scaled-frame" name="desktop-scaled-frame" src="/" scrolling='no'></iframe>
+</div>
+<div id="tablet-portrait-wrap">
+    <img src="img/frame-tablet-portrait.png" width="578" height="781" />
+    <iframe id="tablet-portrait-scaled-frame" name="tablet-portrait-scaled-frame" src="/" scrolling='no'></iframe>
+</div>
+<div id="tablet-landscape-wrap">
+    <img src="img/frame-tablet-landscape.png" width="832" height="589" />
+    <iframe id="tablet-landscape-scaled-frame" name="tablet-landscape-scaled-frame" src="/" scrolling='no'></iframe>
+</div>
+<div id="mobile-wrap">
+    <img src="img/frame-mobile.png" width="303" height="622" />
+    <iframe id="mobile-scaled-frame" name="mobile-scaled-frame" src="/" scrolling='no'></iframe>
+</div>
+
+<script>
+
+    //- get frame target elements
+    var desktopFrame = document.getElementById("desktop-scaled-frame").contentWindow;
+    var tabletPortraitFrame = document.getElementById("tablet-portrait-scaled-frame").contentWindow;
+    var tabletLandscapeFrame = document.getElementById("tablet-landscape-scaled-frame").contentWindow;
+    var mobileFrame = document.getElementById("mobile-scaled-frame").contentWindow;
+
+    let scrollTop = 0;
+
+    window.addEventListener('mousewheel', function (e) {
+        scrollTop += e.deltaY;
+        if (scrollTop < 0) scrollTop = 0;
+        desktopFrame.scrollTo( 0, scrollTop);
+        tabletPortraitFrame.scrollTo( 0, scrollTop);
+        tabletLandscapeFrame.scrollTo( 0, scrollTop);
+        mobileFrame.scrollTo( 0, scrollTop);
+        e.preventDefault();
+        e.stopPropagation();
+    }, { passive:false });
+
+    const scrollToElementId = (container, id) => {
+        const el = container.document.getElementById(id);
+        if (el) {
+            const headerHeight = container.document.getElementById('header').clientHeight;
+            container.scrollTo({top: el.offsetTop - headerHeight + 1, behavior: 'smooth'});
+        }
+    };
+
+    function goto(id) {
+        scrollToElementId(desktopFrame, id);
+        scrollToElementId(tabletPortraitFrame, id);
+        scrollToElementId(tabletLandscapeFrame, id);
+        scrollToElementId(mobileFrame, id);
+    }
+
+    document.getElementById("btn-home").addEventListener("click", (e) => {
+        e.preventDefault();
+        goto('top');
+    });
+    document.getElementById("btn-about").addEventListener("click", (e) => {
+        e.preventDefault();
+        goto('about');
+    });
+    document.getElementById("btn-process").addEventListener("click", (e) => {
+        e.preventDefault();
+        goto('process');
+    });
+    document.getElementById("btn-technology").addEventListener("click", (e) => {
+        e.preventDefault();
+        goto('technology');
+    });
+    document.getElementById("btn-contact").addEventListener("click", (e) => {
+        e.preventDefault();
+        goto('contact');
+    });
+</script>
+</body>
+</html>
