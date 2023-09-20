@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }`,
           }}
         />
+        <Script src="/js/newrelic.js" />
         <Script src="https://www.googletagmanager.com/gtag/js?id=UA-5947153-1" />
         <Script id="google-analytics">
           {`
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date()); 
           gtag('config', 'UA-5947153-1');
-        `}
+          `}
         </Script>
       </head>
       <body className={`overflow-x-hidden bg-white text-grey ${roboto.className}`}>
