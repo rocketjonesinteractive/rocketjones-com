@@ -38,6 +38,16 @@ export const buttonStyles = cva(
           'hover:!border-red',
           'hover:text-white',
         ],
+        quaternary: [
+          'bg-red',
+          'text-white',
+          'hover:bg-transparent',
+          'hover:border-white',
+          'hover:text-white',
+          'group-hover:bg-transparent',
+          'group-hover:border-white',
+          'group-hover:text-white',
+        ],
       },
       shape: {
         rectangle: ['rounded-xl'],

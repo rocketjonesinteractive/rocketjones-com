@@ -38,6 +38,11 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
       active: false,
     },
     {
+      name: 'Blog',
+      id: 'blog',
+      active: false,
+    },
+    {
       name: 'Get Started',
       id: 'contact',
       active: false,

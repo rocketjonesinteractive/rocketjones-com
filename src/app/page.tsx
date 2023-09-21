@@ -9,6 +9,7 @@ import { Footer } from '@/components/ui/organisms/Footer/Footer';
 import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop';
 import { VideoOverlay } from '@/components/ui/organisms/VideoOverlay/VideoOverlay';
 import { Promise } from '@/components/ui/organisms/Promise/Promise';
+import { Blog } from '@/components/ui/organisms/Blog/Blog';
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
       <Hero />
       <About />
       <Promise />
-      <Stats />
       <Process />
       <Expertise />
       <Technology />
+      <Stats />
+      <Blog />
       <Contact />
       <Footer />
       <ScrollToTop />
