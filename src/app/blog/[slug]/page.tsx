@@ -17,26 +17,28 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <div id="top" className={'blog-template mt-[var(--header-height)]'}>
       <div className={'invert-selection bg-red font-heading text-white'}>
-        <div className="container relative flex justify-between">
-          <div className={'ml-8 w-1/2 py-20'}>
-            <div className="text-3xl font-light text-black first-letter:ml-[-2px]">Rocket Blog</div>
+        <div className="container relative flex flex-col justify-between overflow-hidden px-4 sm:flex-row sm:px-0">
+          <div className={'relative z-[2] ml-8 w-full py-20 sm:ml-12 sm:w-1/2'}>
+            <div className="text-xl font-light text-black first-letter:ml-[-2px] sm:text-3xl">
+              Rocket Blog
+            </div>
             <div className="my-4 w-[60px] border-b-2 border-b-black"></div>
-            <div className="mr-4 mt-4 text-5xl font-black [text-wrap:balance] first-letter:ml-[-2px]">
+            <div className="mr-4 mt-4 text-3xl font-black [text-wrap:balance] first-letter:ml-[-2px] sm:text-5xl">
               {blogEntry.title}
             </div>
           </div>
           <div
-            className="relative h-auto w-1/2 bg-cover bg-center bg-no-repeat"
+            className="relative hidden h-auto w-full bg-cover bg-center bg-no-repeat sm:block sm:w-1/2"
             style={{ backgroundImage: `url('/img/blog/${blogEntry.image}')` }}
           >
             <BgOverlay opacity={40} />
           </div>
-          <div className="innerborder border-8-white absolute left-[0px] top-[20px] z-[10] h-[calc(100%-40px)] w-[calc(100%-20px)] border-8 opacity-30"></div>
+          <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-0 sm:w-[calc(100%-20px)]"></div>
         </div>
       </div>
-      <div className="bg-white py-4 drop-shadow-xl">
+      <div className="bg-white px-4 py-4 drop-shadow-xl">
         <div className="container">
-          <div className="flex items-center justify-center gap-8 text-sm">
+          <div className="flex flex-col items-center justify-center gap-2 text-sm sm:flex-row sm:gap-8">
             <div className="flex">
               <User className={'mr-2 text-black'} />
               {blogEntry.author}
@@ -62,6 +64,15 @@ export default function Page({ params }: { params: { slug: string } }) {
           __html: blogEntry.body,
         }}
       />
+      <div
+        className={'container mx-auto my-16 w-3/4 border-2 border-zinc-200 p-8 text-lg lg:w-1/2'}
+      >
+        Custom web applications and mobile apps are more than just a piece of software. They are
+        tools that can accelerate your business and help your team go to the next level. If you want
+        to learn more or ask a few questions, we’d love to chat about what could work for you. Give
+        us a call at (970) 482-5790.
+      </div>
+      {/* TODO: add persistent blog signoff/footer with cta to contact*/}
       <Contact />
       <Footer />
       <ScrollToTop />
