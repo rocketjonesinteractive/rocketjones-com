@@ -20,11 +20,14 @@ export default function Page({ params }: { params: { slug: string } }) {
         <div className="container relative flex flex-col justify-between overflow-hidden px-4 sm:flex-row sm:px-0">
           <div className={'relative z-[2] ml-8 w-full py-20 sm:ml-12 sm:w-1/2'}>
             <div className="text-xl font-light text-black first-letter:ml-[-2px] sm:text-3xl">
-              Rocket Blog
+              <span className={'font-black uppercase'}>Rocket</span> Blog
             </div>
             <div className="my-4 w-[60px] border-b-2 border-b-black"></div>
             <div className="mr-4 mt-4 text-3xl font-black [text-wrap:balance] first-letter:ml-[-2px] sm:text-5xl">
               {blogEntry.title}
+            </div>
+            <div className="mr-4 mt-4 text-lg [text-wrap:balance] first-letter:ml-[-2px] sm:text-xl">
+              {blogEntry.caption}
             </div>
           </div>
           <div
@@ -59,13 +62,15 @@ export default function Page({ params }: { params: { slug: string } }) {
         </div>
       </div>
       <div
-        className="container mx-auto my-16 w-3/4 lg:w-1/2"
+        className="container mx-auto my-16 w-3/4 max-w-[700px] lg:w-1/2"
         dangerouslySetInnerHTML={{
           __html: blogEntry.body,
         }}
       />
       <div
-        className={'container mx-auto my-16 w-3/4 border-2 border-zinc-200 p-8 text-lg lg:w-1/2'}
+        className={
+          'container mx-auto my-16 w-3/4 max-w-[700px] border-2 border-zinc-200 p-8 text-lg lg:w-1/2'
+        }
       >
         <div className="flex">
           <Image
