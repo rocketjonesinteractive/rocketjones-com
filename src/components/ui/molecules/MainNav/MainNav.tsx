@@ -179,7 +179,7 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
           ))}
         <li>
           <Button id="link-contact" onClick={() => navigate('contact')}>
-            Get Started
+            Contact Us
           </Button>
         </li>
       </ul>
