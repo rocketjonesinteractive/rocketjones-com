@@ -8,7 +8,7 @@ import { Footer } from '@/components/ui/organisms/Footer/Footer.tsx';
 import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop.tsx';
 import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 import { Contact } from '@/components/ui/organisms/Contact/Contact.tsx';
-
+import Image from 'next/image';
 export default function Page({ params }: { params: { slug: string } }) {
   const blogEntry = blogEntries.find((x) => slugify(x.title) === params.slug);
 
@@ -67,10 +67,21 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div
         className={'container mx-auto my-16 w-3/4 border-2 border-zinc-200 p-8 text-lg lg:w-1/2'}
       >
-        Custom web applications and mobile apps are more than just a piece of software. They are
-        tools that can accelerate your business and help your team go to the next level. If you want
-        to learn more or ask a few questions, we’d love to chat about what could work for you. Give
-        us a call at (970) 482-5790.
+        <div className="flex">
+          <Image
+            src={'/img/icons/rocket-colored.svg'}
+            width={100}
+            height={100}
+            alt={'Rocket Jones'}
+            className={'mr-8 hidden sm:block'}
+          />
+          <div>
+            Custom web applications and mobile apps are more than just a piece of software. They are
+            tools that can accelerate your business and help your team go to the next level. If you
+            want to learn more or ask a few questions, we’d love to chat about what could work for
+            you. Give us a call at (970) 482-5790.
+          </div>
+        </div>
       </div>
       {/* TODO: add persistent blog signoff/footer with cta to contact*/}
       <Contact />

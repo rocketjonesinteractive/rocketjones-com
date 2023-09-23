@@ -37,7 +37,13 @@ html {
 }
 
 .blog-template h2 {
-    @apply text-3xl font-bold mb-4 mt-12 text-black;
+    @apply text-3xl font-bold mb-8 mt-12 text-black relative font-heading;
+}
+
+.blog-template h2:after {
+    content: "";
+    @apply border-b-2 border-b-red w-[60px] bottom-[-16px] left-0 absolute;
+
 }
 
 .blog-template p {
