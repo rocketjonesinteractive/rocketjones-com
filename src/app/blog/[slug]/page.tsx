@@ -18,21 +18,19 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div id="top" className={'blog-template mt-[var(--header-height)]'}>
       <div className={'invert-selection bg-red font-heading text-white'}>
         <div className="container relative flex justify-between">
-          <div className={'ml-8 w-1/2 py-12'}>
+          <div className={'ml-8 w-1/2 py-20'}>
             <div className="text-3xl font-light text-black first-letter:ml-[-2px]">Rocket Blog</div>
             <div className="my-4 w-[60px] border-b-2 border-b-black"></div>
-            <div className="mt-4 text-5xl font-black uppercase [text-wrap:balance] first-letter:ml-[-2px]">
+            <div className="mr-4 mt-4 text-5xl font-black [text-wrap:balance] first-letter:ml-[-2px]">
               {blogEntry.title}
             </div>
           </div>
-
           <div
             className="relative h-auto w-1/2 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('/img/blog/${blogEntry.image}')` }}
           >
             <BgOverlay opacity={40} />
           </div>
-
           <div className="innerborder border-8-white absolute left-[0px] top-[20px] z-[10] h-[calc(100%-40px)] w-[calc(100%-20px)] border-8 opacity-30"></div>
         </div>
       </div>
