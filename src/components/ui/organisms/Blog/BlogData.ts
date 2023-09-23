@@ -20,8 +20,8 @@ const data: BlogEntry[] = [
     date: new Date('2019-05-07'),
     body: ` \
       <p>Imagine you own a cabinet-making company. You hire excellent carpenters who are hard working and skilled. They work diligently every week to meet deadlines and satisfy customers with a great product. But over time, your competitors start to edge you out of the market. Business slows down even with your solid business model, great team, quality materials, and dedication to customer satisfaction.</p> \
-      Puzzling, right?</p> \
-      Now imagine that all your carpenters only have access to manual hand tools. No table saws, no routers, no power drills. Every tool they use is powered by their own strength.</p> \
+      <p>Puzzling, right?</p> \
+      <p>Now imagine that all your carpenters only have access to manual hand tools. No table saws, no routers, no power drills. Every tool they use is powered by their own strength.</p> \
       <p>Obviously, that’s why your business is struggling to compete. Every other competitor is using power tools. It has nothing to do with your employees’ skill or your business practices. It’s all about the tools you use. Continuing to use outdated tools will cause your business to fall further and further behind because everyone else’s employees get the same results with less effort and time.</p> \
       <p>Even if you don’t own a cabinet-making company, the analogy still applies. If you are struggling to keep up with your competitors, it may be that your tools need to be updated. Providing your employees with better software tools allows them to get better results with less time and effort. Moving from an Excel sheet to custom software can be the equivalent of switching from a hand saw to a table saw. Both may eventually have the same result, but the effort and time required are vastly different. Better software tools have three main benefits.</p> \
       <h2>Efficiency</h2> \
@@ -80,7 +80,7 @@ const data: BlogEntry[] = [
       <p>One of the best things about mobile apps is all the functionality within the phone itself. You can take advantage of the camera, GPS, microphone/speakers, touch gestures, contacts and calendar, and more. Your developer will want to know which of these features you want to use because it takes, you guessed it, more programming to integrate those features. Don’t assume that the phone’s functionality will be rolled into the app, as it still takes some specific code-writing to make it happen.</p>\
       <h2>What third-party integrations will be used?</h2>\
       <p>Not every piece of every app will be coded by hand. There are a lot of excellent third-party tools that can be plugged in through an API. The developer will still need to do some work to integrate it, but they can be a great way to save on costs and use reliable technology. Some examples are social media platforms, PayPal and other payment processing services, and many others. Your developer will want to know if you plan to use any of these tools, and they can offer suggestions for third-party options.</p>\
-      <blockquote>If you want to see how the answers to these questions affect the cost of your app development, check out our free mobile app calculator! It walks you through these questions and more, and at the end you can download a PDF with a ballpark estimate of what your app might cost to build. It’s not an official quote, but it’s a good starting place.</blockquote> 
+      <p>If you want to see how the answers to these questions affect the cost of your app development, check out our free mobile app calculator! It walks you through these questions and more, and at the end you can download a PDF with a ballpark estimate of what your app might cost to build. It’s not an official quote, but it’s a good starting place.</p> 
     `,
   },
   {

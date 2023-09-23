@@ -26,7 +26,7 @@
     background: rgba(var(--color-red-rgb), 0.5);
 }
 
-.promise ::selection {
+.invert-selection ::selection {
     color: black;
     background: rgba(255,255,255, 0.5);
 }
@@ -34,6 +34,22 @@
 html {
     /* to offset sticky header */
     scroll-padding-top: calc(var(--header-height) - 1px);
+}
+
+.blog-template h2 {
+    @apply text-3xl font-bold mb-4 mt-12 text-black;
+}
+
+.blog-template p {
+    @apply my-4 text-lg;
+}
+
+.blog-template ul {
+    @apply my-4 text-lg;
+}
+
+.blog-template ul li {
+    @apply list-disc my-4 ml-12;
 }
 
 .boxed {

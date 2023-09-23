@@ -8,7 +8,7 @@ import Rocket from '../../../../../public/img/icons/rocket.svg';
 
 export const Promise = () => {
   return (
-    <div className={'promise grid grid-cols-6 overflow-hidden text-white'}>
+    <div className={'promise invert-selection grid grid-cols-6 overflow-hidden text-white'}>
       <div
         className={
           'col-span-6 flex flex-col items-center justify-center bg-red p-16 text-center lg:col-span-3'

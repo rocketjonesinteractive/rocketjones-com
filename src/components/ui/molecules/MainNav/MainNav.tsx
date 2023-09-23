@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { scrollToElementId } from '@/utils/scroll';
 import MenuIcon from '@/../public/img/icons/menu.svg';
 import CloseIcon from '@/../public/img/icons/close.svg';
+import { useSpaLink } from '@/hooks/useSpaLink.tsx';
 
 type NavItem = {
   name: string;
@@ -50,9 +51,11 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
     },
   ]);
 
+  const { navigate, pathname, isOnHome, isOnBlog } = useSpaLink();
+
   const handleNavItemClick = (e: any, item: NavItem) => {
     e.preventDefault();
-    scrollToElementId(item.id);
+    navigate(item.id);
     setNavItems((prev) =>
       prev.map((navItem) => ({
         ...navItem,
@@ -68,6 +71,19 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
 
   const detectFurtherNavItemScrolledTo = useCallback(() => {
     if (global.isAutoScrolling) return;
+
+    if (!isOnHome) {
+      if (isOnBlog) {
+        setNavItems((prev) =>
+          prev.map((navItem) => ({
+            ...navItem,
+            active: navItem.id === 'blog',
+          })),
+        );
+        return;
+      }
+    }
+
     const furthestNavItem = navItems.reduce((prev, current) => {
       const el = document.getElementById(current.id);
       const headerHeight = parseInt(
@@ -85,7 +101,7 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
         active: navItem.id === furthestNavItem.id,
       })),
     );
-  }, []); // eslint-disable-line
+  }, [isOnHome, isOnBlog]); // eslint-disable-line
 
   const updateActiveItemBasedOnHash = useCallback(() => {
     const hash = window.location.hash;
@@ -162,7 +178,7 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
             </li>
           ))}
         <li>
-          <Button id="link-contact" onClick={() => scrollToElementId('contact')}>
+          <Button id="link-contact" onClick={() => navigate('contact')}>
             Get Started
           </Button>
         </li>
