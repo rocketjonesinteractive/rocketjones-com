@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode } from 'react';
 import { AnimateOnScrollDiv } from '@/components/ui/molecules/AnimateOnScrollDiv/AnimateOnScroll';
 import { addDelay, animationVariants } from '@/utils/animations';
@@ -5,6 +7,8 @@ import MessageChat from '../../../../../public/img/icons/message-chat-square.svg
 import CheckCircle from '../../../../../public/img/icons/check-circle-broken.svg';
 import BankNote from '../../../../../public/img/icons/bank-note.svg';
 import Rocket from '../../../../../public/img/icons/rocket.svg';
+import { scrollToElementId } from '@/utils/scroll.ts';
+import { Button } from '@/components/ui/atoms/Button/Button.tsx';
 
 export const Promise = () => {
   return (
@@ -24,6 +28,13 @@ export const Promise = () => {
             We promise painless projects every time. The Rocket Jones team sincerely cares about the
             success of every project, and our work is founded on these three principles.
           </div>
+          <Button
+            variant={'quinary'}
+            onClick={() => scrollToElementId('contact')}
+            className={'relative z-[1] mx-auto mt-8'}
+          >
+            Schedule Free Consultation
+          </Button>
           <div className="absolute bottom-0 left-0 right-0 top-0 z-0 flex items-center justify-center">
             <Rocket className={'scale-[0.65] text-black opacity-10 lg:scale-100'} />
           </div>

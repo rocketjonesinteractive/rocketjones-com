@@ -163,7 +163,7 @@ export const ContactForm = () => {
       id={'contact'}
     >
       <SectionHeading
-        caption={"Let's Talk"}
+        caption={'Free Consultation'}
         title={
           <>
             Get <span className={'font-semibold'}>Started</span>

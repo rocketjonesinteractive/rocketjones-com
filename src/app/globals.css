@@ -58,6 +58,14 @@ html {
     @apply list-disc my-4 ml-12;
 }
 
+.blog-template a {
+    @apply text-red;
+}
+
+.blog-template a:hover {
+    @apply underline;
+}
+
 .pull-quote {
     @apply float-right w-full md:w-1/2 text-[24px] font-heading font-medium text-black pl-0 md:pl-12 pb-8 [text-wrap:balance] uppercase;
 }

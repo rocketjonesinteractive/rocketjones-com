@@ -44,19 +44,36 @@ export const Expertise = () => {
         <BgOverlay opacity={40} />
         <div className="innerborder border-8-white absolute left-[20px] top-[20px] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30"></div>
       </AnimateOnScrollDiv>
-      <div
-        className={'col-span-6 p-12 lg:col-span-2 ' + 'bg-gradient-to-r from-gray-100 to-gray-300'}
+      <AnimateOnScrollDiv
+        variants={addDelay(animationVariants.fadeInLeft, 0)}
+        className={
+          'col-span-6 p-12 uppercase lg:col-span-2 ' + 'bg-gradient-to-r from-gray-100 to-gray-300'
+        }
       >
-        <div className={'font-heading font-bold uppercase tracking-wider'}>
-          Our Areas of Expertise
+        <Spotlight />
+        <Quote className={'mb-2 text-red'} />
+        <div
+          className={'font-heading text-[22px] font-medium leading-tight text-black lg:text-[18px]'}
+        >
+          Rocket Jones makes custom web development easy. In Rocket Jones, we have a partner who has
+          invested in understanding our technology and bringing it to life in a web application. As
+          developers ourselves, we can attest to the quality of their work. The team is very
+          responsive and invested in productive outcomes.
         </div>
-        <div className="mt-8 flex flex-col gap-8">
-          <ExpertisePercentage animDelay={0} title={'Software Development'} percent={100} />
-          <ExpertisePercentage animDelay={0.1} title={'UX/UI & Design'} percent={100} />
-          <ExpertisePercentage animDelay={0.2} title={'Digital Marketing'} percent={100} />
-          <ExpertisePercentage animDelay={0.3} title={'Infrastructure & Support'} percent={100} />
+        <div className={'ml-[60px]'}>
+          <div
+            className={
+              'relative mt-4 font-heading font-bold leading-none ' +
+              "before:absolute before:left-[-35px] before:top-1/2 before:h-[2px] before:w-[20px] before:bg-red before:content-['']"
+            }
+          >
+            Ross Liggett
+          </div>
+          <div className={'font-heading text-sm font-medium'}>
+            Founder and Managing Partner, Metolius Golf
+          </div>
         </div>
-      </div>
+      </AnimateOnScrollDiv>
     </div>
   );
 };

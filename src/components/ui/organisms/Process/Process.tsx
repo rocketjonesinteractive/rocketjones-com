@@ -5,15 +5,17 @@ import { SectionHeading } from '../../molecules/SectionHeading/SectionHeading';
 import { AnimateOnScrollDiv } from '@/components/ui/molecules/AnimateOnScrollDiv/AnimateOnScroll';
 import { addDelay, animationVariants } from '@/utils/animations';
 import { useAppStore } from '@/store/app.store';
+import { scrollToElementId } from '@/utils/scroll.ts';
+import { Button } from '../../atoms/Button/Button';
 
 export const Process = () => {
   return (
     <Section id={'process'}>
       <SectionHeading
-        caption={'Our Process'}
+        caption={'Solutions at Every Stage'}
         title={
           <>
-            Solutions at <span className={'font-semibold'}>Every Stage</span>
+            The Rocket <span className={'font-semibold'}>Process</span>
           </>
         }
       />
@@ -21,7 +23,7 @@ export const Process = () => {
         <ProcessTile
           title={'Explore + Imagine'}
           description={
-            'During this stage, we take the time to get to know you and your company and learn about your story. We ask questions, listen, and identify your priorities and work flow. The goal of Stage 1 is a complete understanding of the application’s context, users, and tasks.'
+            "Contact Rocket Jones to schedule time so we can get to know you and your company and learn about your story. We will ask questions, listen, and identify your priorities and workflow. The goal is a complete understanding of the app's context, users, and tasks, with a cost estimate as an output."
           }
           stage={1}
           animDelay={0.2}
@@ -58,6 +60,18 @@ export const Process = () => {
           videoId={'211017138'}
           videoTitle={'Rocket Jones: Stage 4: Support + Scale'}
         />
+      </div>
+      <div
+        className={
+          'mt-14 flex flex-col items-center justify-center gap-8 px-4 sm:px-8 lg:mt-28 lg:flex-row'
+        }
+      >
+        <h3 className={'text-center font-heading text-3xl text-black'}>
+          Let Rocket Jones <span className={'font-black text-red'}>Boost Your Business</span>
+        </h3>
+        <Button variant={'primary'} onClick={() => scrollToElementId('contact')}>
+          Contact Now
+        </Button>
       </div>
     </Section>
   );

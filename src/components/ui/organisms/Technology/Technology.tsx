@@ -8,10 +8,10 @@ export const Technology = () => {
   return (
     <Section id={'technology'}>
       <SectionHeading
-        caption={'Technology'}
+        caption={'Trusted Platforms'}
         title={
           <>
-            Trusted <span className={'font-semibold'}>Platforms</span>
+            We Deliver <span className={'font-semibold'}>Solutions That Scale</span>
           </>
         }
       />

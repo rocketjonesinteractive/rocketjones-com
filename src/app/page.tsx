@@ -10,6 +10,7 @@ import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop';
 import { VideoOverlay } from '@/components/ui/organisms/VideoOverlay/VideoOverlay';
 import { Promise } from '@/components/ui/organisms/Promise/Promise';
 import { Blog } from '@/components/ui/organisms/Blog/Blog';
+import { FreeConsultation } from '@/components/ui/organisms/FreeConsultation/FreeConsultation.tsx';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Expertise />
       <Technology />
       <Stats />
+      <FreeConsultation />
       <Blog />
       <Contact />
       <Footer />

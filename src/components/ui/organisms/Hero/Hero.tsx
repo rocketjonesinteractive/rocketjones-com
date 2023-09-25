@@ -106,8 +106,7 @@ export const HeroTypewriter = () => {
 export const HeroDescription = () => {
   return (
     <div className={'mb-8 font-heading text-sm text-white [text-wrap:balance] md:text-base'}>
-      Rocket Jones can help streamline and grow your business with custom app development and
-      support.
+      Streamline and grow your business with custom app development by Rocket Jones.
     </div>
   );
 };
@@ -115,8 +114,8 @@ export const HeroDescription = () => {
 export const HeroCTA = ({ onOpenVideoClick }: { onOpenVideoClick: () => void }) => {
   return (
     <div className={'flex gap-2'}>
-      <Button variant={'secondary'} onClick={() => scrollToElementId('about')}>
-        Learn More
+      <Button variant={'secondary'} onClick={() => scrollToElementId('contact')}>
+        Free Consultation
       </Button>
       <Button variant={'primary'} onClick={onOpenVideoClick}>
         &#x25BA;&nbsp;&nbsp;Watch Video

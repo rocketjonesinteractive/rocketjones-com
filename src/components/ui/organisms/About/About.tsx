@@ -15,7 +15,7 @@ export const About = () => {
         <AboutTile
           title={'Save Time'}
           description={
-            'Create efficiencies for your organization with a system designed around your processes and business needs. Say goodbye to spreadsheets, paperwork, clunky software, and redundancies.'
+            'Boost efficiency with a system designed around your processes and business needs. Say goodbye to spreadsheets, paperwork, clunky software, and redundancies.'
           }
           icon={<Hourglass />}
           animDelay={0}
