@@ -61,17 +61,22 @@ export const Process = () => {
           videoTitle={'Rocket Jones: Stage 4: Support + Scale'}
         />
       </div>
-      <div
-        className={
-          'mt-14 flex flex-col items-center justify-center gap-8 px-4 sm:px-8 lg:mt-28 lg:flex-row'
-        }
-      >
-        <h3 className={'text-center font-heading text-3xl text-black'}>
-          Let Rocket Jones <span className={'font-black text-red'}>Boost Your Business</span>
-        </h3>
-        <Button variant={'primary'} onClick={() => scrollToElementId('contact')}>
-          Contact Now
-        </Button>
+      <div className={'mt-4 w-full md:mt-8'}>
+        <div className="border-8-black mx-4 flex flex-col items-center justify-center gap-4 border-8 bg-gradient-to-r from-gray-100 to-gray-300 p-4 sm:p-8 md:mx-8 md:gap-8 lg:flex-row">
+          <h3 className={'text-center font-heading text-3xl text-black'}>
+            Let Rocket Jones{' '}
+            <span
+              className={
+                'inline-block bg-gradient-to-r from-red from-30% to-black bg-clip-text font-black text-transparent'
+              }
+            >
+              Boost Your Business
+            </span>
+          </h3>
+          <Button variant={'tertiary'} onClick={() => scrollToElementId('contact')}>
+            Contact Now
+          </Button>
+        </div>
       </div>
     </Section>
   );

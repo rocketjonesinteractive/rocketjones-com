@@ -5,7 +5,7 @@ import { scrollToElementId } from '@/utils/scroll.ts';
 
 export const FreeConsultation = () => {
   return (
-    <div className={'overflow-hidden p-16 ' + 'bg-black'}>
+    <div className={'overflow-hidden p-16 ' + 'bg-black-pattern'}>
       <div className="container flex flex-col items-center justify-center gap-8 lg:flex-row lg:gap-16">
         <h3 className={'text-center font-heading text-3xl text-white'}>
           Schedule Your <span className={'font-black text-red'}>Free Consultation</span> Today
