@@ -103,7 +103,7 @@ const ProcessTile = ({
     <AnimateOnScrollDiv variants={addDelay(animationVariants.processTile, animDelay ?? 0)}>
       <div
         className={
-          'group h-full border border-greyOutline shadow-none transition-all duration-500 hover:border-transparent hover:shadow-2xl'
+          'group h-full border-2 border-greyOutline shadow-none transition-all duration-500 hover:border-transparent hover:shadow-2xl'
         }
       >
         <div className="flex h-full flex-col items-center justify-between p-8 text-center">
