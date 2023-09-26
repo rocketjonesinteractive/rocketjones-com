@@ -6,15 +6,29 @@ import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 import { BlogEntry } from '@/components/ui/organisms/Blog/BlogData.ts';
 import { slugify } from '@/utils/string.ts';
 import Link from 'next/link';
+import { addDelay, animationVariants } from '@/utils/animations.ts';
+import { AnimateOnScrollDiv } from '@/components/ui/molecules/AnimateOnScrollDiv/AnimateOnScroll.tsx';
 
-export const BlogTile = ({ data, index }: { data: BlogEntry; index: number }) => {
+export const BlogTile = ({
+  data,
+  index,
+  animDelay,
+}: {
+  data: BlogEntry;
+  index: number;
+  animDelay: number;
+}) => {
   if (index === 0)
     return (
       <Link
         href={`/blog/${slugify(data.title)}`}
-        className={`boxed-thickwhite group relative col-span-1 cursor-pointer bg-greyLight text-white md:col-span-2`}
+        className={
+          `boxed-thickwhite group relative col-span-1 cursor-pointer text-white md:col-span-2 ` +
+          'bg-gradient-to-br from-zinc-700 via-zinc-900 to-black'
+        }
       >
-        <div
+        <AnimateOnScrollDiv
+          variants={addDelay(animationVariants.blogTile, animDelay ?? 0)}
           className={`relative h-full bg-cover bg-center p-12`}
           style={{ backgroundImage: `url('/img/blog/${data.image}')` }}
         >
@@ -36,7 +50,7 @@ export const BlogTile = ({ data, index }: { data: BlogEntry; index: number }) =>
           <div className={'opacity-50 transition-opacity group-hover:opacity-30'}>
             <BgOverlay opacity={100} />
           </div>
-        </div>
+        </AnimateOnScrollDiv>
       </Link>
     );
   else
@@ -48,24 +62,26 @@ export const BlogTile = ({ data, index }: { data: BlogEntry; index: number }) =>
           `bg-gradient-to-br from-zinc-700 via-zinc-900 to-black`
         }
       >
-        <div>
-          <img src={`/img/blog/${data.image}`} />
-        </div>
-        <div className="relative z-[2] p-12 pt-10">
-          <h3
-            className={
-              'mb-2 font-heading text-[20px] font-black leading-tight text-red [text-wrap:balance] group-hover:text-white'
-            }
-          >
-            {data.title}
-          </h3>
-          <div className="my-4 w-[60px] border-b-2 border-b-red"></div>
-          <div>{data.caption}</div>
-        </div>
-        <Spotlight />
-        <div className={'opacity-50 transition-opacity group-hover:opacity-30'}>
-          <BgOverlay opacity={100} />
-        </div>
+        <AnimateOnScrollDiv variants={addDelay(animationVariants.blogTile, animDelay ?? 0)}>
+          <div>
+            <img src={`/img/blog/${data.image}`} />
+          </div>
+          <div className="relative z-[2] p-12 pt-10">
+            <h3
+              className={
+                'mb-2 font-heading text-[20px] font-black leading-tight text-red [text-wrap:balance] group-hover:text-white'
+              }
+            >
+              {data.title}
+            </h3>
+            <div className="my-4 w-[60px] border-b-2 border-b-red"></div>
+            <div>{data.caption}</div>
+          </div>
+          <Spotlight />
+          <div className={'opacity-50 transition-opacity group-hover:opacity-30'}>
+            <BgOverlay opacity={100} />
+          </div>
+        </AnimateOnScrollDiv>
       </Link>
     );
 };

@@ -62,7 +62,7 @@ export const Process = () => {
           videoTitle={'Rocket Jones: Stage 4: Support + Scale'}
         />
       </div>
-      <div className={'mt-4 w-full md:mt-8'}>
+      <AnimateOnScrollDiv variants={animationVariants.fadeInUp} className={'mt-4 w-full md:mt-8'}>
         <div className="border-8-black mx-4 flex flex-col items-center justify-center gap-4 border-8 bg-gradient-to-r from-gray-100 to-gray-300 p-4 sm:p-8 md:mx-8 md:gap-8 lg:flex-row">
           <h3 className={'text-center font-heading text-[28px] text-black'}>
             <span
@@ -86,7 +86,7 @@ export const Process = () => {
             Contact Now
           </Button>
         </div>
-      </div>
+      </AnimateOnScrollDiv>
     </Section>
   );
 };

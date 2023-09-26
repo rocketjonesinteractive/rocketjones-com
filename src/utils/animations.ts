@@ -115,4 +115,12 @@ export const animationVariants = {
     },
     hidden: { opacity: 0, x: 100 },
   },
+  blogTile: {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
+    hidden: { opacity: 0, y: 100 },
+  },
 };

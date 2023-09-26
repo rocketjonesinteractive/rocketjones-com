@@ -18,7 +18,7 @@ export const Blog = () => {
         {blogEntries
           .filter((x) => x.id < 6)
           .map((data, i) => (
-            <BlogTile key={data.id} data={data} index={i} />
+            <BlogTile key={data.id} data={data} index={i} animDelay={i * 0.1} />
           ))}
       </div>
     </Section>
