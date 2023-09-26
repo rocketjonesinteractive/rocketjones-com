@@ -40,14 +40,14 @@ export const Promise = () => {
           </div>
         </AnimateOnScrollDiv>
       </div>
-      <div className={'bg-red-pattern relative col-span-6 px-8 py-16 lg:col-span-3 lg:px-16'}>
+      <div className={'bg-black-pattern relative col-span-6 px-8 py-16 lg:col-span-3 lg:px-16'}>
         <div className="mx-4 flex flex-col items-start justify-center gap-4 md:mx-8 md:gap-8">
           <PromiseTile
             title={'Communication'}
             description={
               'We have a knack for making the complex simple. If you ever have a question or concern during any part of your project, send us an email or give us a call. We are here to help.'
             }
-            icon={<MessageChat />}
+            icon={<MessageChat className={'text-red'} />}
             animDelay={0}
           />
           <PromiseTile
@@ -55,7 +55,7 @@ export const Promise = () => {
             description={
               'We are good at what we do, and we promise the highest quality solutions possible. We deliver beautiful, secure, and scalable software.'
             }
-            icon={<CheckCircle />}
+            icon={<CheckCircle className={'text-red'} />}
             animDelay={0.2}
           />
           <PromiseTile
@@ -63,7 +63,7 @@ export const Promise = () => {
             description={
               'Surprises are for birthdays, not invoices. We constantly communicate, and we stick to the budget. If changes are required, the final decision is always the customer’s.'
             }
-            icon={<BankNote />}
+            icon={<BankNote className={'text-red'} />}
             animDelay={0.4}
           />
         </div>
@@ -88,7 +88,9 @@ const PromiseTile = ({
       <div className="flex gap-4">
         <div>{icon}</div>
         <div>
-          <div className="mb-2 mt-1 font-heading font-bold uppercase tracking-wider">{title}</div>
+          <div className="mb-2 mt-1 font-heading font-bold uppercase tracking-wider text-red">
+            {title}
+          </div>
           <div className={'text-sm leading-relaxed'}>{description}</div>
         </div>
       </div>
