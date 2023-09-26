@@ -7,7 +7,9 @@ export const Footer = () => {
   const [logoType, setLogoType] = useState<'old' | 'new'>('new');
 
   return (
-    <div className={'my-8 flex flex-col items-center justify-center overflow-hidden lg:my-16'}>
+    <div
+      className={'flex flex-col items-center justify-center overflow-hidden bg-black py-8 lg:py-16'}
+    >
       {logoType === 'old' && (
         <Image
           src={'/img/rocketjones-logo-black.png'}
@@ -18,7 +20,7 @@ export const Footer = () => {
       )}
       {logoType === 'new' && (
         <Image
-          src={`/img/rocket-jones-logo.svg`}
+          src={`/img/rocket-jones-logo-white.svg`}
           alt={'Rocket Jones Interactive'}
           width={207 * 2}
           height={32 * 2}
@@ -27,7 +29,7 @@ export const Footer = () => {
         />
       )}
       <div className="mt-8 text-center">
-        <div className="text-md font-heading font-semibold uppercase text-black">
+        <div className="text-md font-heading font-semibold uppercase text-white">
           Cloud, Web & Mobile &bull; Custom Apps
         </div>
         <div className="text-xs uppercase">&copy; 2023 Rocket Jones Interactive</div>
