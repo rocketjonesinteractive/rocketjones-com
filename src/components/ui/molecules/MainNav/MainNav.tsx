@@ -51,7 +51,7 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
     },
   ]);
 
-  const { navigate, pathname, isOnHome, isOnBlog } = useSpaLink();
+  const { navigate, pathname, isOnHome, isOnBlog, isOnProjects } = useSpaLink();
 
   const handleNavItemClick = (e: any, item: NavItem) => {
     e.preventDefault();
@@ -78,6 +78,15 @@ export const MainNav = ({ color }: { color: 'light' | 'dark' }) => {
           prev.map((navItem) => ({
             ...navItem,
             active: navItem.id === 'blog',
+          })),
+        );
+        return;
+      }
+      if (isOnProjects) {
+        setNavItems((prev) =>
+          prev.map((navItem) => ({
+            ...navItem,
+            active: false,
           })),
         );
         return;

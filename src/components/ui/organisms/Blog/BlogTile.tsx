@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/atoms/Button/Button.tsx';
 import Spotlight from '@/components/ui/organisms/Spotlight/Spotlight.tsx';
 import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
-import { BlogEntry } from '@/components/ui/organisms/Blog/BlogData.ts';
+import { BlogEntry } from '@/data/BlogData.ts';
 import { slugify } from '@/utils/string.ts';
 import Link from 'next/link';
 import { addDelay, animationVariants } from '@/utils/animations.ts';

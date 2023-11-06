@@ -9,22 +9,24 @@ import BankNote from '../../../../../public/img/icons/bank-note.svg';
 import Rocket from '../../../../../public/img/icons/rocket.svg';
 import { scrollToElementId } from '@/utils/scroll.ts';
 import { Button } from '@/components/ui/atoms/Button/Button.tsx';
+import Spotlight from '@/components/ui/organisms/Spotlight/Spotlight.tsx';
+import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 
-export const Promise = () => {
+export const Promise = ({ numColumns = 3 }: { numColumns?: 2 | 3 }) => {
   return (
     <div className={'promise invert-selection grid grid-cols-6 overflow-hidden text-white'}>
       <div
-        className={
-          'col-span-6 flex flex-col items-center justify-center bg-red p-16 text-center lg:col-span-3'
-        }
+        className={`col-span-6 flex flex-col items-center justify-center bg-red p-16 text-center ${
+          numColumns === 2 ? 'lg:col-span-3' : 'lg:col-span-2'
+        }`}
       >
         <AnimateOnScrollDiv variants={animationVariants.promiseText} className={'relative'}>
           <div
-            className={'relative z-[1] font-heading text-[36px] uppercase leading-tight text-black'}
+            className={'relative z-[1] font-heading text-[36px] uppercase leading-tight text-white'}
           >
             The <span className={'font-black'}>Rocket</span> Promise
           </div>
-          <div className={'relative z-[1] mt-8 font-heading leading-relaxed [text-wrap:balance]'}>
+          <div className={'relative z-[1] mt-8 leading-relaxed [text-wrap:balance]'}>
             We promise painless projects every time. The Rocket Jones team sincerely cares about the
             success of every project, and our work is founded on these three principles.
           </div>
@@ -35,12 +37,13 @@ export const Promise = () => {
           >
             Schedule Free Consultation
           </Button>
-          <div className="absolute bottom-0 left-0 right-0 top-0 z-0 flex items-center justify-center">
-            <Rocket className={'scale-[0.65] text-black opacity-10 lg:scale-100'} />
-          </div>
         </AnimateOnScrollDiv>
       </div>
-      <div className={'bg-black-pattern relative col-span-6 px-8 py-16 lg:col-span-3 lg:px-16'}>
+      <div
+        className={`bg-black-pattern relative col-span-6 px-8 py-16 md:col-span-3 lg:px-12 ${
+          numColumns === 2 ? 'lg:col-span-3' : 'lg:col-span-2'
+        }`}
+      >
         <div className="mx-4 flex flex-col items-start justify-center gap-4 md:mx-8 md:gap-8">
           <PromiseTile
             title={'Communication'}
@@ -68,6 +71,13 @@ export const Promise = () => {
           />
         </div>
       </div>
+      {numColumns === 3 && (
+        <div
+          className={`relative col-span-6 flex min-h-[300px] items-center justify-center bg-zinc-800 bg-rocketLandscapeSquare bg-cover bg-top bg-no-repeat md:col-span-3 lg:col-span-2`}
+        >
+          <Spotlight />
+        </div>
+      )}
     </div>
   );
 };

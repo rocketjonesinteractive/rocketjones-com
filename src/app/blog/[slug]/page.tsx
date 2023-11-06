@@ -1,4 +1,4 @@
-import blogEntries from '../../../components/ui/organisms/Blog/BlogData.ts';
+import blogEntries from '../../../data/BlogData.ts';
 import { slugify } from '@/utils/string.ts';
 import { notFound } from 'next/navigation';
 import User from '@/../public/img/icons/user.svg';
@@ -10,9 +10,9 @@ import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 import { Contact } from '@/components/ui/organisms/Contact/Contact.tsx';
 import Image from 'next/image';
 export default function Page({ params }: { params: { slug: string } }) {
-  const blogEntry = blogEntries.find((x) => slugify(x.title) === params.slug);
+  const data = blogEntries.find((x) => slugify(x.title) === params.slug);
 
-  if (!blogEntry) return notFound();
+  if (!data) return notFound();
 
   return (
     <div id="top" className={'blog-template mt-[var(--header-height)]'}>
@@ -24,15 +24,15 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
             <div className="my-4 w-[60px] border-b-2 border-b-black"></div>
             <div className="relative mr-4 mt-4 text-3xl font-black [text-wrap:balance] first-letter:ml-[-2px] sm:text-5xl">
-              {blogEntry.title}
+              {data.title}
             </div>
             <div className="mr-8 mt-4 text-lg [text-wrap:balance] first-letter:ml-[-2px] sm:mr-4 sm:text-xl">
-              {blogEntry.caption}
+              {data.caption}
             </div>
           </div>
           <div
             className="relative hidden h-auto w-full bg-cover bg-center bg-no-repeat sm:block sm:w-1/2"
-            style={{ backgroundImage: `url('/img/blog/${blogEntry.image}')` }}
+            style={{ backgroundImage: `url('/img/blog/${data.image}')` }}
           >
             <BgOverlay opacity={40} />
           </div>
@@ -44,11 +44,11 @@ export default function Page({ params }: { params: { slug: string } }) {
           <div className="flex flex-col items-center justify-center gap-2 text-sm sm:flex-row sm:gap-8">
             <div className="flex">
               <User className={'mr-2 text-black'} />
-              {blogEntry.author}
+              {data.author}
             </div>
             <div className="flex">
               <Calendar className={'mr-2 text-black'} />
-              {blogEntry.date.toLocaleDateString('en-us', {
+              {data.date.toLocaleDateString('en-us', {
                 year: 'numeric',
                 month: 'short',
                 day: 'numeric',
@@ -56,7 +56,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
             <div className="flex">
               <Archive className={'mr-2 text-black'} />
-              {blogEntry.categories.join(', ')}
+              {data.categories.join(', ')}
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       <div
         className="container mx-auto my-16 w-3/4 max-w-[700px] lg:w-1/2"
         dangerouslySetInnerHTML={{
-          __html: blogEntry.body,
+          __html: data.body,
         }}
       />
       <div

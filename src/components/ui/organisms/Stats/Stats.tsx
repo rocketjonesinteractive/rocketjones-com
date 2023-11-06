@@ -7,7 +7,7 @@ import { addDelay, animationVariants } from '@/utils/animations';
 
 export const Stats = () => {
   return (
-    <div className={'overflow-hidden p-16 ' + 'bg-gradient-to-r from-gray-100 to-gray-300'}>
+    <div className={'overflow-hidden p-16 ' + 'bg-tan'}>
       <div className="container flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16">
         <Stat value={'8+ Years'} caption={'Avg. Partnership'} icon={<Users />} animDelay={0} />
         <Stat value={'22 Years'} caption={'In Business'} icon={<Building />} animDelay={0.2} />

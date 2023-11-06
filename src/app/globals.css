@@ -12,6 +12,9 @@
     --color-grey-light: #F7F7F7;
     --color-grey-outline: #DEE2E6;
     --color-grey-border: #D1D1D1;
+    --color-tan: #fdf6e0;
+    --color-tan-darker: #f1e6c6;
+    --color-tan-darkest: #c7b889;
     --header-height: 90px;
 }
 
@@ -43,7 +46,10 @@ html {
 .blog-template h2:after {
     content: "";
     @apply border-b-2 border-b-red w-[60px] bottom-[-16px] left-0 absolute;
+}
 
+.blog-template h3 {
+    @apply text-lg mb-4 mt-12 text-black relative font-heading uppercase text-zinc-400 tracking-wide font-bold;
 }
 
 .blog-template p {
@@ -72,6 +78,41 @@ html {
 
 blockquote {
     @apply m-0;
+}
+
+
+.project-template h2 {
+    @apply text-3xl font-bold mb-8 mt-12 text-black relative font-heading;
+}
+
+.project-template h2:after {
+    content: "";
+    @apply border-b-2 border-b-red w-[60px] bottom-[-16px] left-0 absolute;
+
+}
+
+.project-template p {
+    @apply my-4 text-lg;
+}
+
+.project-template ul, .project-template ol {
+    @apply my-4 text-lg;
+}
+
+.project-template ul li {
+    @apply list-disc my-4 ml-12;
+}
+
+.project-template ol li {
+    @apply list-decimal my-4 ml-12;
+}
+
+.project-template a {
+    @apply text-red;
+}
+
+.project-template a:hover {
+    @apply underline;
 }
 
 .boxed {

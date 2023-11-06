@@ -12,6 +12,13 @@ export const addDelay = (variants: any, delay: number) => {
 };
 
 export const animationVariants = {
+  fadeIn: {
+    visible: {
+      opacity: 1,
+      transition: { duration: fadeInDuration, ease: fadeInEase },
+    },
+    hidden: { opacity: 0 },
+  },
   fadeInUp: {
     visible: {
       opacity: 1,
@@ -43,6 +50,22 @@ export const animationVariants = {
       transition: { duration: fadeInDuration, ease: fadeInEase },
     },
     hidden: { opacity: 0, transform: 'translate3d(100%,0,0)' },
+  },
+  testimonialPrev: {
+    visible: {
+      opacity: 1,
+      transform: 'translate3d(0,0,0)',
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+    hidden: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
+  },
+  testimonialNext: {
+    visible: {
+      opacity: 1,
+      transform: 'translate3d(0,0,0)',
+      transition: { duration: 0.4, ease: 'easeOut' },
+    },
+    hidden: { opacity: 0, transform: 'translate3d(50%,0,0)' },
   },
   aboutTile: {
     visible: {

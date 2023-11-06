@@ -19,6 +19,7 @@ export const useSpaLink = () => {
 
   const isOnHome = pathname === '/';
   const isOnBlog = pathname.startsWith('/blog');
+  const isOnProjects = pathname.startsWith('/projects');
 
-  return { navigate, pathname, isOnHome, isOnBlog };
+  return { navigate, pathname, isOnHome, isOnBlog, isOnProjects };
 };

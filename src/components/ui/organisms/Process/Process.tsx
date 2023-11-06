@@ -63,12 +63,12 @@ export const Process = () => {
         />
       </div>
       <AnimateOnScrollDiv variants={animationVariants.fadeInUp} className={'mt-4 w-full md:mt-8'}>
-        <div className="border-8-black mx-4 flex flex-col items-center justify-center gap-4 border-8 bg-gradient-to-r from-gray-100 to-gray-300 p-4 sm:p-8 md:mx-8 md:gap-8 lg:flex-row">
-          <h3 className={'text-center font-heading text-3xl text-black'}>
+        <div className="bg-tan border-tanDarker mx-4 flex flex-col items-center justify-center gap-4 border-2 p-4 sm:p-8 md:mx-8 md:gap-8 lg:flex-row">
+          <h3 className={'text-tanDarkest text-center font-heading text-3xl'}>
             Start Your Project With A <span className={'font-black'}>Free Consultation</span>
           </h3>
-          <Button variant={'tertiary'} onClick={() => scrollToElementId('contact')}>
-            Contact Now
+          <Button variant={'tan'} onClick={() => scrollToElementId('contact')}>
+            Schedule Now
           </Button>
         </div>
       </AnimateOnScrollDiv>

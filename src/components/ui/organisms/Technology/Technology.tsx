@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const Technology = () => {
   return (
-    <Section id={'technology'}>
+    <Section id={'technology'} className={'bg-moon bg-top-1/2 bg-opacity-25 bg-cover bg-no-repeat'}>
       <SectionHeading
         caption={'Trusted Platforms'}
         title={

@@ -1,6 +1,6 @@
 import { Hero } from '@/components/ui/organisms/Hero/Hero';
 import { About } from '@/components/ui/organisms/About/About';
-import { Expertise } from '@/components/ui/organisms/Expertise/Expertise';
+import { Testimonials } from '@/components/ui/organisms/Testimonials/Testimonials.tsx';
 import { Process } from '@/components/ui/organisms/Process/Process';
 import { Stats } from '@/components/ui/organisms/Stats/Stats';
 import { Technology } from '@/components/ui/organisms/Technology/Technology';
@@ -19,7 +19,7 @@ export default function Home() {
       <About />
       <Promise />
       <Process />
-      <Expertise />
+      <Testimonials />
       <Technology />
       <Stats />
       <FreeConsultation />

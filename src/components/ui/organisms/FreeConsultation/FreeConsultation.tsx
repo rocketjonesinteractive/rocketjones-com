@@ -26,7 +26,7 @@ export const FreeConsultation = () => {
           />
         </h3>
         <Button variant={'primary'} onClick={() => scrollToElementId('contact')}>
-          Schedule Now
+          Contact Now
         </Button>
       </AnimateOnScrollDiv>
     </div>

@@ -147,6 +147,36 @@ const data: BlogEntry[] = [
       <p>Hopefully this process helps you get down to the bones of what you want technology to solve for your business. If you like to talk things out in person, or you’d like to hear some options for solutions, <a href="#contact">contact us</a> and send us a note. We’d love to chat about what could work for you.</p>\
     ',
   },
+  {
+    id: 6,
+    title: 'Shining A Light on Unexpected Costs',
+    image: 'shining-a-light-on-unexpected-costs.jpg',
+    caption: 'Considerations as you approach the development of custom software for your business.',
+    author: 'Rocket Jones',
+    categories: ['Business Management'],
+    date: new Date('2023-11-05'),
+    body: ` \
+      <p>App owners are often surprised by the effort involved in maintaining their tool over its lifecycle. Far from being a final destination, launch is only the beginning of a software’s life. Like any piece of machinery, it needs updates and monitoring, clean up, and maintenance. As your user base grows, your software must adapt. Progressing technology and increased usage are great things—as long as you are prepared for them. With a good service and performance evaluation plan, you can keep your software running and your customers happy. As you read through our list of maintenance items to consider you may be overwhelmed. There are a lot of things to keep track of! That's where Rocket Jones comes in. Not only are we developers of world class applications, but we are also tuned into the industry and aware of updates when they become available. And we are experts at implementing necessary updates at the right time.</p> \
+      <p>Here is a list of items to consider as you approach the development of custom software for your business:</p> \
+      <h2>Software Framework Updates</h2> \
+      <h3>Web Technology Frameworks</h3> \
+      <aside class="pull-quote"><blockquote> \
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
+      Keeping your application current improves reliability, speed, and consistency. \
+      </blockquote></aside> \
+      <p>This is one of the key areas to watch for. Thankfully, software framework updates are necessary every couple of years, but it's important to stay on top of them. Web technology frameworks are always improving, so the code built on top of those frameworks must adapt too. At launch, every line of code in your application was in line with best practices. But that may change next year or the year after. Keeping your application current improves reliability, speed, and consistency. The choice to keep your underlying frameworks updated is the choice to keep your application stable and secure. By updating the software, you keep your application safe and running at top performance. And if issues do come up, using the most current version reduces support and maintenance time, which means you spend less time dealing with unhappy users. </p> \
+      <h3>Mobile App Platforms</h3> \
+      <p>The mobile market changes constantly, and each year companies like Apple and Google roll out new features and screen sizes and update their Software Development Kits. A mobile app that is scalable and ready for these changes can be updated seamlessly, keeping users happily using your app.</p> \
+      <h3>Browser Compatibility</h3> \
+      <p>Browsers such as Chrome, Firefox, or Safari are always updating and evolving. Because they deliver and render your content to your users it’s important to accommodate for their changes. Without updating code to reflect browser changes, your application could break or render incorrectly. Stay updated and you’ll avoid emergency fixes because of a new browser version.</p> \
+      <h2>Application Performance Optimization</h2> \
+      <p>It is important to monitor your app's performance over time. You can track growth and peak points, which will help you adjust for any unexpected changes.</p> \
+      <h2>Application Scaling</h2> \
+      <p>Over time, as your application changes and grows, you may need to scale your software. Every application is unique, and the solutions are never one-size-fits all. You need a partner that can pinpoint areas of stress within the application and make recommendations that will get you the most for your budget and effort. Whether this means modifications to the code base to help processes run more efficiently, or changes to the underlying technologies or infrastructure to help the application handle the increasing load.</p> \
+      <h2>Conclusion</h2> \
+      <p>As you consider a custom application for your business, remember that it's a lot like the purchase of a new car. The initial expense of the vehicle itself is only part of the total cost of ownership. The beauty of working with Rocket Jones is not only are we like the car manufacturers, we are also a personal assistant who notifies you of needed maintenance, and we are the trusted mechanic capable of doing the work for you when the time is right for you and your application.</p> \      
+    `,
+  },
 ];
 
 export default data;

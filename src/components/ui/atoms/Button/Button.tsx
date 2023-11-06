@@ -55,6 +55,13 @@ export const buttonStyles = cva(
           'hover:border-black',
           'hover:text-black',
         ],
+        tan: [
+          'bg-transparent',
+          'text-tanDarkest',
+          '!border-tanDarkest',
+          ' hover:!border-black',
+          'hover:text-black',
+        ],
       },
       shape: {
         rectangle: ['rounded-xl'],
@@ -71,7 +78,7 @@ export const buttonStyles = cva(
 
 export type ButtonProps = Pick<
   DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
-  'onClick' | 'type' | 'disabled' | 'id'
+  'onClick' | 'onMouseEnter' | 'onMouseLeave' | 'type' | 'disabled' | 'id'
 > &
   VariantProps<typeof buttonStyles> & {
     className?: string;

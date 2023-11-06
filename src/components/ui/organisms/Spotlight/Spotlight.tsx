@@ -61,7 +61,7 @@ export default function Spotlight() {
       ref={containerRef}
     >
       <SpotlightCard>
-        <div className="relative z-10 h-full overflow-hidden bg-transparent">
+        <div className="relative z-20 h-full overflow-hidden bg-transparent">
           <div
             className="pointer-events-none absolute bottom-0 left-1/2 -z-10 aspect-square w-1/2 -translate-x-1/2 translate-y-1/2"
             aria-hidden="true"

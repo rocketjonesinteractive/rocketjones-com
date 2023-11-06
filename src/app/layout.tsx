@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat, Roboto } from 'next/font/google';
 import { Header } from '@/components/ui/organisms/Header/Header';
 import Script from 'next/script';
+import { ProjectHeader } from '@/components/ui/organisms/Header/ProjectHeader.tsx';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700'] });
 const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'] });
