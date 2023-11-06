@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <>
       <div>
-        <Image
+        <img
           src={'/img/rocket-landscape-bg.jpg'}
           alt={'Rocket Jones'}
           width={1440}
