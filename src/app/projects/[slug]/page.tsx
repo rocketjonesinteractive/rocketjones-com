@@ -60,9 +60,11 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div className="text-md mr-12 mt-4 font-light [text-wrap:balance] first-letter:ml-[-2px] sm:mr-12 sm:text-lg lg:text-xl">
               {data.title2}
             </div>
-            <Button variant={'secondary'} className={'z-10 mt-8'}>
-              Download Whitepaper
-            </Button>
+            <Link href={data.downloadUrl} target={'_blank'} className={'hover:!no-underline'}>
+              <Button variant={'secondary'} className={'z-10 mt-8'}>
+                Download Case Study
+              </Button>
+            </Link>
           </div>
         </div>
         <div className={'m-0 py-8'}>
@@ -142,16 +144,23 @@ export default function Page({ params }: { params: { slug: string } }) {
               </>
             }
           />
-          <div className={'text-lg'}>{data.conclusion}</div>
+          <div
+            className={'text-lg'}
+            dangerouslySetInnerHTML={{
+              __html: data.conclusion,
+            }}
+          />
           <AnimateOnScrollDiv
             variants={animationVariants.fadeInUp}
             className={'mt-8 w-full md:mt-24'}
           >
             <div className="flex flex-col items-center justify-center gap-4 border-2 border-tanDarker bg-tan p-4 sm:p-8 md:gap-8 lg:flex-row">
               <h3 className={'text-center font-heading text-3xl text-tanDarkest'}>
-                Download the <span className={'font-black'}>Whitepaper</span>
+                Download the <span className={'font-black'}>Case Study</span>
               </h3>
-              <Button variant={'tan'}>Download</Button>
+              <Link href={data.downloadUrl} target={'_blank'} className={'hover:!no-underline'}>
+                <Button variant={'tan'}>Download (PDF)</Button>
+              </Link>
             </div>
           </AnimateOnScrollDiv>
         </div>
