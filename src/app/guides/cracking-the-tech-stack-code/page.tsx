@@ -43,7 +43,7 @@ function DownloadForm() {
       />
       <Button
         onClick={() => {
-          window.location = '/files/rocketjones-guide-cracking-the-tech-stack-code.pdf';
+          window.location.href = '/files/rocketjones-guide-cracking-the-tech-stack-code.pdf';
         }}
       >
         Get My Problem-Solving Guide
