@@ -72,6 +72,43 @@ html {
     @apply underline;
 }
 
+.guide-template h2 {
+    @apply text-3xl font-bold mb-8 mt-12 text-black relative font-heading text-center;
+}
+
+.guide-template h2:after {
+    content: "";
+    @apply border-b-2 border-b-red w-[60px] bottom-[-16px] left-[calc(50%-30px)] absolute;
+}
+
+.guide-template h3 {
+    @apply text-lg mb-4 mt-12 text-black relative font-heading uppercase text-zinc-400 tracking-wide font-bold;
+}
+
+.guide-template p {
+    @apply my-4 text-lg;
+}
+
+.guide-template ul, .guide-template ol {
+    @apply my-4 text-lg;
+}
+
+.guide-template ul li {
+    @apply list-disc my-4 ml-12;
+}
+
+.guide-template ol li {
+    @apply list-decimal my-0 ml-5;
+}
+
+.guide-template a {
+    @apply text-red;
+}
+
+.guide-template a:hover {
+    @apply underline;
+}
+
 .pull-quote {
     @apply float-right w-full md:w-1/2 text-[24px] font-heading font-medium text-black pl-0 md:pl-12 pb-8 [text-wrap:balance] uppercase;
 }
