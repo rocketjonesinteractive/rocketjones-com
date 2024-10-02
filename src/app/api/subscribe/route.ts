@@ -56,7 +56,7 @@ export async function POST(req: Request) {
       }
     }
 
-    await fetch(`${JOURNEY_URL}`, {
+    const journeyResponse = await fetch(`${JOURNEY_URL}`, {
       body: JSON.stringify({
         email_address: email,
       }),
@@ -66,6 +66,14 @@ export async function POST(req: Request) {
       },
       method: 'POST',
     });
+
+    if (journeyResponse.status >= 400) {
+      const { detail } = await journeyResponse.json();
+      return NextResponse.json(
+        { error: `There was an error initiating the workflow. Error: ${detail}` },
+        { status: 400 },
+      );
+    }
 
     return NextResponse.json({ name, email, success: true });
   } catch (error: any) {
