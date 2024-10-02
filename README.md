@@ -26,6 +26,9 @@ pnpm install
 
 If you do not have PNPM installed, you can install it here: https://pnpm.io/installation
 
+### Environment Variables
+You will need to clone the `.env.example` file and rename it to `.env`. Then, provide values for each environment variable. Ask another developer to give you a copy of their file, if needed. This file contains the environment variables needed for the site to run.
+
 ## Development
 
 To run the development server:
