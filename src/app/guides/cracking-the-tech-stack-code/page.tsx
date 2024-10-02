@@ -54,7 +54,6 @@ function DownloadForm() {
 
     resetForm();
 
-    console.log('alreadySubscribed', alreadySubscribed);
     if (!alreadySubscribed) {
       let hasErrors = false;
 
@@ -76,8 +75,6 @@ function DownloadForm() {
       if (hasErrors) return;
 
       setIsSubmitting(true);
-
-      console.log('submitting form', formData);
 
       const response = await fetch('/api/subscribe', {
         method: 'POST',
