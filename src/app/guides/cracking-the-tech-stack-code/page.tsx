@@ -9,16 +9,113 @@ import { Footer } from '@/components/ui/organisms/Footer/Footer.tsx';
 import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop.tsx';
 import { Button } from '@/components/ui/atoms/Button/Button.tsx';
 import { TextInput } from '@/components/ui/atoms/TextInput/TextInput.tsx';
-import { FormEvent, useState } from 'react';
+import React, { FormEvent, useEffect, useLayoutEffect, useState } from 'react';
 import Image from 'next/image';
 
-function DownloadForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+type FormData = {
+  name: string;
+  email: string;
+};
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+type FormErrors = {
+  name: string;
+  email: string;
+};
+
+const defaultFormData = { name: '', email: '' };
+
+function DownloadForm() {
+  const [formData, setFormData] = useState<FormData>(defaultFormData);
+  const [fieldErrors, setFieldErrors] = useState<FormErrors>(defaultFormData);
+  const [formError, setFormError] = useState('');
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [alreadySubscribed, setAlreadySubscribed] = useState(false);
+
+  useLayoutEffect(() => {
+    setAlreadySubscribed(localStorage.getItem('alreadySubscribed') === 'true');
+  }, []);
+
+  const resetForm = () => {
+    Object.keys(defaultFormData).forEach((key) => {
+      setFieldErrors((prev) => ({ ...prev, [key]: '' }));
+    });
+    setFormError('');
+    setSubmitSuccess(false);
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('submitting form', { name, email });
+
+    resetForm();
+
+    console.log('alreadySubscribed', alreadySubscribed);
+    if (!alreadySubscribed) {
+      let hasErrors = false;
+
+      if (!formData.name) {
+        setFieldErrors((prev) => ({ ...prev, name: 'Name is required.' }));
+        hasErrors = true;
+      }
+
+      if (!formData.email) {
+        setFieldErrors((prev) => ({ ...prev, email: 'Email is required.' }));
+        hasErrors = true;
+      }
+
+      if (!validateEmail(formData.email)) {
+        setFieldErrors((prev) => ({ ...prev, email: 'Invalid email address.' }));
+        hasErrors = true;
+      }
+
+      if (hasErrors) return;
+
+      setIsSubmitting(true);
+
+      console.log('submitting form', formData);
+
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      setIsSubmitting(false);
+
+      if (!response.ok) {
+        const { error } = await response.json();
+        setFormError(error);
+        return;
+      }
+
+      localStorage.setItem('alreadySubscribed', 'true');
+
+      setSubmitSuccess(true);
+    }
+
+    window.location.href = '/files/rocketjones-guide-cracking-the-tech-stack-code.pdf';
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+    setFieldErrors((prev) => {
+      return { ...prev, [e.target.name]: '' };
+    });
+  };
+
+  const backToForm = () => {
+    setAlreadySubscribed(false);
+    resetForm();
+    localStorage.setItem('alreadySubscribed', 'false');
   };
 
   return (
@@ -29,25 +126,46 @@ function DownloadForm() {
       className={'mx-0 flex animate-fadeIn flex-col gap-4 bg-tan p-4 lg:mx-8 lg:p-12 xl:mx-16'}
     >
       <h4 className={'text-center font-bold uppercase'}>Download Our Free Guide</h4>
-      <TextInput
-        name={'name'}
-        placeholder={'Your Name'}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <TextInput
-        name={'email'}
-        placeholder={'Your Email'}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <Button
-        onClick={() => {
-          window.location.href = '/files/rocketjones-guide-cracking-the-tech-stack-code.pdf';
-        }}
-      >
-        Get My Problem-Solving Guide
-      </Button>
+      {!alreadySubscribed && (
+        <>
+          <p className={'!mt-[-10px] max-w-xs text-center !text-sm'}>
+            By submitting this form, I agree to receive future communications and updates from
+            Rocket Jones.
+          </p>
+          <TextInput
+            name={'name'}
+            placeholder={'Your Name'}
+            value={formData.name}
+            onChange={handleChange}
+            error={fieldErrors.name}
+          />
+          <TextInput
+            name={'email'}
+            placeholder={'Your Email'}
+            value={formData.email}
+            onChange={handleChange}
+            error={fieldErrors.email}
+          />
+          <Button type={'submit'} disabled={isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Get My Problem-Solving Guide'}
+          </Button>
+          {formError && <div className={'max-w-xs text-center text-red'}>{formError}</div>}
+          {submitSuccess && (
+            <div className={'text-success max-w-xs text-center'}>
+              Success! Redirecting to download...
+            </div>
+          )}
+        </>
+      )}
+      {alreadySubscribed && (
+        <>
+          <div className={'text-success text-center'}>You are already subscribed, thank you!</div>
+          <Button variant="tertiary" onClick={backToForm}>
+            Back to Form
+          </Button>
+          <Button type={'submit'}>Get My Problem-Solving Guide</Button>
+        </>
+      )}
     </form>
   );
 }
