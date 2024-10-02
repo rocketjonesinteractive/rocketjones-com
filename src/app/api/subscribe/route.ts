@@ -24,6 +24,7 @@ export async function POST(req: Request) {
     const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
     const API_KEY = process.env.MAILCHIMP_API_KEY;
     const DATACENTER = process.env.MAILCHIMP_API_SERVER;
+    const JOURNEY_URL = process.env.MAILCHIMP_JOURNEY_TRIGGER_URL;
     const data = {
       email_address: email,
       status: 'subscribed',
@@ -54,6 +55,17 @@ export async function POST(req: Request) {
         );
       }
     }
+
+    await fetch(`${JOURNEY_URL}`, {
+      body: JSON.stringify({
+        email_address: email,
+      }),
+      headers: {
+        Authorization: `apikey ${API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
 
     return NextResponse.json({ name, email, success: true });
   } catch (error: any) {
