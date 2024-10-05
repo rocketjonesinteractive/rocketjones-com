@@ -125,7 +125,7 @@ function DownloadForm() {
       <h4 className={'text-center font-bold uppercase'}>Download Our Free Guide</h4>
       {!alreadySubscribed && (
         <>
-          <p className={'!mt-[-10px] max-w-xs text-center !text-sm'}>
+          <p className={'!mt-[-10px] text-center !text-sm'}>
             By submitting this form, I agree to receive future communications and updates from
             Rocket Jones.
           </p>
@@ -171,8 +171,8 @@ export default function Page() {
   return (
     <div id="top" className={'guide-template mt-[var(--header-height)]'}>
       <div className={'invert-selection bg-red font-heading text-white'}>
-        <div className="container relative flex flex-col justify-between overflow-hidden px-4 sm:flex-row sm:px-0">
-          <div className={'relative z-[2] ml-8 w-auto py-20 sm:ml-12 sm:w-1/2'}>
+        <div className="container relative flex flex-col justify-between overflow-hidden px-4 md:flex-row md:px-0">
+          <div className={'relative z-[2] ml-8 w-auto py-20 pb-10 md:ml-12 md:w-1/2 md:pb-20'}>
             <div className="text-xl font-light text-black first-letter:ml-[-2px] sm:text-3xl">
               <span className={'font-black uppercase'}>Rocket</span> Guide
             </div>
@@ -186,45 +186,20 @@ export default function Page() {
             </div>
           </div>
           <div
-            className="relative hidden h-auto w-full bg-cover bg-center bg-no-repeat sm:block sm:w-1/2"
+            className="relative z-[2] flex h-auto w-full justify-center bg-cover bg-center bg-no-repeat px-10 py-20 pt-0 text-gray-800 sm:px-0 md:mr-8 md:block md:w-1/2 md:pt-20 xl:mr-0"
             style={{ backgroundImage: `url('/img/guides/cracking-the-tech-stack-code-bg.jpg')` }}
           >
-            <BgOverlay opacity={40} />
+            <DownloadForm />
           </div>
-          <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-0 sm:w-[calc(100%-20px)]"></div>
+          <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-[0px] sm:w-[calc(100%)]"></div>
         </div>
       </div>
-      <div className="bg-white px-4 py-4 drop-shadow-xl">
-        <div className="container">
-          <div className="flex flex-col items-center justify-center gap-2 text-sm sm:flex-row sm:gap-8">
-            <div className="flex">
-              <User className={'mr-2 text-black'} />
-              Rocket Jones
-            </div>
-            <div className="flex">
-              <Calendar className={'mr-2 text-black'} />
-              {new Date().toLocaleDateString('en-us', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}
-            </div>
-            <div className="flex">
-              <Archive className={'mr-2 text-black'} />
-              {['Business Management'].join(', ')}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container mx-auto my-16 w-3/4 max-w-[800px] lg:w-1/2">
+      <div className="container mx-auto my-16 w-3/4 max-w-[800px] lg:w-3/4">
         <h2>Unlock Solutions to Your Tech Stack Challenges</h2>
         <p className={'text-center'}>
           Download our free guide: "5 Challenges When Selecting a Tech Stack, And Solutions for
           Each"
         </p>
-        <div className="my-12 flex justify-center">
-          <DownloadForm />
-        </div>
         <div className="align-center my-12 flex justify-center">
           <div className={'flex flex-col'}>
             <p style={{ margin: 0, padding: 0 }}>What's inside:</p>
