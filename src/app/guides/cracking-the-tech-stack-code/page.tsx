@@ -1,15 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
-import User from '../../../../public/img/icons/user.svg';
-import Calendar from '../../../../public/img/icons/calendar.svg';
-import Archive from '../../../../public/img/icons/archive.svg';
 import { Footer } from '@/components/ui/organisms/Footer/Footer.tsx';
 import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop.tsx';
 import { Button } from '@/components/ui/atoms/Button/Button.tsx';
 import { TextInput } from '@/components/ui/atoms/TextInput/TextInput.tsx';
-import React, { FormEvent, useEffect, useLayoutEffect, useState } from 'react';
+import React, { FormEvent, forwardRef, useLayoutEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 type FormData = {
@@ -24,7 +20,8 @@ type FormErrors = {
 
 const defaultFormData = { name: '', email: '' };
 
-function DownloadForm() {
+// eslint-disable-next-line react/display-name
+const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
   const [formData, setFormData] = useState<FormData>(defaultFormData);
   const [fieldErrors, setFieldErrors] = useState<FormErrors>(defaultFormData);
   const [formError, setFormError] = useState('');
@@ -120,7 +117,8 @@ function DownloadForm() {
       name="guideForm"
       method="post"
       onSubmit={handleSubmit}
-      className={'mx-0 flex animate-fadeIn flex-col gap-4 bg-tan p-4 lg:mx-8 lg:p-12 xl:mx-16'}
+      ref={ref}
+      className={'mx-0 flex flex-col gap-4 bg-tan p-4 lg:mx-8 lg:p-12 xl:mx-16'}
     >
       <h4 className={'text-center font-bold uppercase'}>Download Our Free Guide</h4>
       {!alreadySubscribed && (
@@ -165,9 +163,21 @@ function DownloadForm() {
       )}
     </form>
   );
-}
+});
 
 export default function Page() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const scrollToTopAndFlash = () => {
+    window.scrollTo({ top: 0 });
+    if (formRef.current) {
+      formRef.current.classList.add('flash');
+      setTimeout(() => {
+        formRef.current?.classList.remove('flash');
+      }, 800); // Duration of the flash animation
+    }
+  };
+
   return (
     <div id="top" className={'guide-template mt-[var(--header-height)]'}>
       <div className={'invert-selection bg-red font-heading text-white'}>
@@ -189,7 +199,7 @@ export default function Page() {
             className="relative z-[2] flex h-auto w-full justify-center bg-cover bg-center bg-no-repeat px-10 py-20 pt-0 text-gray-800 sm:px-0 md:mr-8 md:block md:w-1/2 md:pt-20 xl:mr-0"
             style={{ backgroundImage: `url('/img/guides/cracking-the-tech-stack-code-bg.jpg')` }}
           >
-            <DownloadForm />
+            <DownloadForm ref={formRef} />
           </div>
           <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-[0px] sm:w-[calc(100%)]"></div>
         </div>
@@ -216,6 +226,9 @@ export default function Page() {
           At Rocket Jones, we don't just build software – we solve business problems with
           technology. Let us help you solve yours.
         </p>
+        <div className={'flex justify-center'}>
+          <Button onClick={scrollToTopAndFlash}>Download Our Free Guide</Button>
+        </div>
       </div>
       <div
         className={
