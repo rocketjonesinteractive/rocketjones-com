@@ -204,7 +204,7 @@ export default function Page() {
           <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-[0px] sm:w-[calc(100%)]"></div>
         </div>
       </div>
-      <div className="container mx-auto my-16 w-3/4 max-w-[800px] lg:w-3/4">
+      <div className="container mx-auto my-16 w-3/4 max-w-[900px] lg:w-3/4">
         <h2>Unlock Solutions to Your Tech Stack Challenges</h2>
         <p className={'text-center'}>
           Download our free guide: "5 Challenges When Selecting a Tech Stack, And Solutions for
@@ -222,12 +222,22 @@ export default function Page() {
             </ol>
           </div>
         </div>
+        <div className={'mb-20 flex justify-center'}>
+          <Image
+            src={'/img/guides/cracking-the-tech-stack-code-preview.png'}
+            alt={'Guide Preview'}
+            width={818}
+            height={264}
+            quality={100}
+            className={'drop-shadow-2xl'}
+          />
+        </div>
         <p className={'text-center font-bold [text-wrap:balance]'}>
           At Rocket Jones, we don't just build software – we solve business problems with
           technology. Let us help you solve yours.
         </p>
-        <div className={'flex justify-center'}>
-          <Button onClick={scrollToTopAndFlash}>Download Our Free Guide</Button>
+        <div className={'mt-8 flex justify-center'}>
+          <Button onClick={scrollToTopAndFlash}>Download Our Free Guide (PDF)</Button>
         </div>
       </div>
       <div
