@@ -44,7 +44,12 @@ export const Footer = () => {
           <div className="text-md font-heading font-semibold uppercase text-white">
             Cloud, Web & Mobile &bull; Custom Apps
           </div>
-          <div className="text-xs uppercase">&copy; 2023 Rocket Jones Interactive</div>
+          <div className="text-xs uppercase">
+            &copy; 2023 Rocket Jones Interactive &nbsp; &nbsp;| &nbsp; &nbsp;
+            <a href={'/privacy-policy'} className={'footer-link underline'}>
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </>
