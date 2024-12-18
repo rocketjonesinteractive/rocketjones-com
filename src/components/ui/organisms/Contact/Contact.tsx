@@ -110,7 +110,7 @@ export const ContactForm = () => {
     if (Object.keys(validate()).length === 0) {
       setSubmitting(true);
 
-      fetchWithTimeout('/', {
+      fetchWithTimeout('/favicon.ico', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
