@@ -10,8 +10,8 @@ export const GuideCta = () => {
     <div className={'bg-gradient-to-b from-gray-100 to-gray-300'}>
       <div
         className={
-          'overflow-hidden py-14 lg:py-28 ' +
-          'bg-circuits bg-opacity-50 bg-center bg-top-1/2 bg-no-repeat'
+          'overflow-hidden px-8 py-14 lg:py-28 ' +
+          'bg-circuits bg-opacity-50 bg-top-1/2 bg-no-repeat'
         }
       >
         <SectionHeading
