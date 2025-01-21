@@ -65,6 +65,7 @@ let config: Config = {
         map: "url('/img/map-bg.jpg')",
         rocketLandscape: "url('/img/rocket-landscape-bg.jpg')",
         rocketLandscapeSquare: "url('/img/rocket-landscape-square-bg.png')",
+        circuits: "url('/img/bg-circuits.png')",
       },
       keyframes: {
         blink: {

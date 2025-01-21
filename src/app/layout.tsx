@@ -25,10 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <style
           dangerouslySetInnerHTML={{
             __html: `
-        :root {
-          --font-roboto: ${roboto.style.fontFamily};
-          --font-montserrat: ${montserrat.style.fontFamily};
-        }`,
+              :root {
+                --font-roboto: ${roboto.style.fontFamily};
+                --font-montserrat: ${montserrat.style.fontFamily};
+              }
+            `,
           }}
         />
         <Script id="google-tag-manager">
@@ -40,15 +41,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })(window,document,'script','dataLayer','GTM-TVPVTBS7');
           `}
         </Script>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=UA-5947153-1" />
-        <Script id="google-analytics">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date()); 
-          gtag('config', 'UA-5947153-1');
-          `}
-        </Script>
+        {/*<Script src="https://www.googletagmanager.com/gtag/js?id=UA-5947153-1" />*/}
+        {/*<Script id="google-analytics">*/}
+        {/*  {`*/}
+        {/*  window.dataLayer = window.dataLayer || [];*/}
+        {/*  function gtag(){dataLayer.push(arguments);}*/}
+        {/*  gtag('js', new Date()); */}
+        {/*  gtag('config', 'UA-5947153-1');*/}
+        {/*  `}*/}
+        {/*</Script>*/}
       </head>
       <body className={`overflow-x-hidden bg-white text-grey ${roboto.className}`}>
         <noscript>

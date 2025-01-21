@@ -11,6 +11,7 @@ import { VideoOverlay } from '@/components/ui/organisms/VideoOverlay/VideoOverla
 import { Promise } from '@/components/ui/organisms/Promise/Promise';
 import { Blog } from '@/components/ui/organisms/Blog/Blog';
 import { FreeConsultation } from '@/components/ui/organisms/FreeConsultation/FreeConsultation.tsx';
+import { GuideCta } from '@/components/ui/organisms/GuideCta/GuideCta.tsx';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Process />
       <Testimonials />
       <Technology />
+      <GuideCta />
       <Stats />
       <FreeConsultation />
       <Blog />
