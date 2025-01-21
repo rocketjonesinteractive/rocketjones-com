@@ -23,7 +23,11 @@ export const GuideCta = () => {
           }
         />
         <AnimateOnScrollDiv variants={animationVariants.fadeInUp}>
-          <div className={'relative z-[1] mt-8 text-center leading-relaxed [text-wrap:balance]'}>
+          <div
+            className={
+              'relative z-[1] mx-auto mt-8 max-w-2xl text-center leading-relaxed [text-wrap:balance]'
+            }
+          >
             For over 20 years, we&apos;ve been solving complex technology challenges for businesses
             like yours. Now, we&apos;re offering our problem-solving expertise to you.
           </div>
