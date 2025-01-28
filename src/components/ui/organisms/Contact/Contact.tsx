@@ -14,6 +14,12 @@ import { Button } from '@/components/ui/atoms/Button/Button';
 import { Loading } from '@/components/ui/atoms/Loading/Loading';
 import { fetchWithTimeout } from '@/utils/fetch';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 export const Contact = () => {
   return (
     <div className={'grid overflow-hidden md:grid-cols-2'}>
@@ -118,6 +124,12 @@ export const ContactForm = () => {
         .then(() => {
           setShowSubmitSuccess(true);
           setSubmitting(false);
+          if (typeof window !== 'undefined' && window.dataLayer) {
+            window.dataLayer.push({
+              event: 'form_submission',
+              form_name: 'contact_form'
+            });
+          }
         })
         .catch((error) => {
           if (error.name === 'AbortError') handleError('Request timed out. Please try again.');
