@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
-        <Script>
+        <Script id="google-tag-manager-dataLayer">
           {`window.dataLayer = window.dataLayer || [];`}
         </Script>
         <Script id="google-tag-manager">
