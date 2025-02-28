@@ -203,7 +203,7 @@ export default function Page() {
         </div>
       </div>
       <div className="container mx-auto my-16 w-3/4 max-w-[900px] lg:w-3/4">
-        <h1 className="text-4xl font-bold mb-8 text-black">Technology Decisions Simplified: The CEO's Roadmap</h1>
+        <h2 className="text-[2.25rem]">Technology Decisions Simplified: The CEO's Roadmap</h2>
         <h2>Empower Your Business Decisions Without a Technical Background</h2>
         <p className={'text-center'}>
         Finally, a straightforward guide that helps non-technical leaders make informed technology investments with confidence and clarity."
@@ -257,12 +257,6 @@ export default function Page() {
             you. Give us a call at (970) 482-5790.
           </div>
         </div>
-      </div>
-      
-      <div className="container mx-auto mb-16 flex justify-center">
-        <Button onClick={() => window.location.href = '/files/rocketjones-article-CEOs-drive-success.pdf'}>
-          Download Our Article (PDF)
-        </Button>
       </div>
       
       <Footer />
