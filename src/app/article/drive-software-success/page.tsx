@@ -5,6 +5,7 @@ import { Footer } from '@/components/ui/organisms/Footer/Footer.tsx';
 import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop.tsx';
 import { Button } from '@/components/ui/atoms/Button/Button.tsx';
 import { TextInput } from '@/components/ui/atoms/TextInput/TextInput.tsx';
+import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 import React, { FormEvent, forwardRef, useLayoutEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -195,27 +196,27 @@ export default function Page() {
             </div>
           </div>
           <div
-            className="relative z-[2] flex h-auto w-full justify-center bg-cover bg-center bg-no-repeat px-10 py-20 pt-0 text-gray-800 sm:px-0 md:mr-8 md:block md:w-1/2 md:pt-20 xl:mr-0"
+            className="relative hidden h-auto w-full bg-cover bg-center bg-no-repeat sm:block sm:w-1/2"
             style={{ backgroundImage: `url('/img/article/rocketjones-article-CEOs-drive-success.jpeg')` }}
           >
+            <BgOverlay opacity={40} />
           </div>
-          <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-[0px] sm:w-[calc(100%)]"></div>
+          <div className="innerborder border-8-white absolute left-[20px] top-[20px] z-[1] h-[calc(100%-40px)] w-[calc(100%-40px)] border-8 opacity-30 sm:left-0 sm:w-[calc(100%-20px)]"></div>
         </div>
       </div>
       <div className="container mx-auto my-16 w-3/4 max-w-[900px] lg:w-3/4">
-        <h2 className="text-[2.25rem]">Technology Decisions Simplified: The CEO's Roadmap</h2>
-        <h2>Empower Your Business Decisions Without a Technical Background</h2>
+        <h2>Technology Decisions Simplified: The CEO's Roadmap</h2>
         <p className={'text-center'}>
-        Finally, a straightforward guide that helps non-technical leaders make informed technology investments with confidence and clarity."
+        A straightforward guide that helps non-technical leaders make informed technology investments with confidence and clarity.
         </p>
         <div className="align-center my-12 flex justify-center">
           <div className={'flex flex-col'}>
             <p style={{ margin: 0, padding: 0 }}>What You'll Gain:</p>
             <ul>
-              <li><strong>Avoid Costly Mistakes</strong> – Discover common pitfalls that lead to budget overruns, poor-quality software, and long-term technical debt.</li>
-              <li><strong>Find the Right Fit</strong> – Identify the best approach for your company based on resources, scalability, and strategic goals.</li>
-              <li><strong>Choose the Right Development Approach</strong> – Weigh the benefits and risks of in-house teams, freelancers, and professional development partners.</li>
-              <li><strong>Lead with Confidence</strong> – Gain the knowledge you need to assess technical partners, ensure quality, and align software with business goals.</li>
+              <li>Discover common pitfalls that lead to budget overruns, poor-quality software, and long-term technical debt.</li>
+              <li>Identify the best approach for your company based on resources, scalability, and strategic goals.</li>
+              <li>Weigh the benefits and risks of in-house teams, freelancers, and professional development partners.</li>
+              <li>Gain the knowledge you need to assess technical partners, ensure quality, and align software with business goals.</li>
             </ul>
           </div>
         </div>
