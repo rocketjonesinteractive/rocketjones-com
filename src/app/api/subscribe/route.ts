@@ -6,7 +6,7 @@ const validateEmail = (email: string) => {
 };
 
 export async function POST(req: Request) {
-  const { name, email } = await req.json();
+  const { name, email, source } = await req.json();
 
   if (!name) {
     return NextResponse.json({ error: 'Name is required.' }, { status: 400 });
@@ -45,6 +45,28 @@ export async function POST(req: Request) {
         method: 'POST',
       },
     );
+
+    if (source === 'drive-software-success') {
+      const tagData = {
+        tags: [
+          { name: 'Paid Lead', status: 'active' },
+          { name: 'drive-software-success', status: 'active' },
+        ],
+      };
+
+      // Add the tags to the contact
+      await fetch(
+        `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members/${email}/tags`,
+        {
+          body: JSON.stringify(tagData),
+          headers: {
+            Authorization: `apikey ${API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+        },
+      );
+    }
 
     if (response.status >= 400) {
       const { title, detail } = await response.json();

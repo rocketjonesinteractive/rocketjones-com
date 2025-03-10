@@ -74,12 +74,14 @@ const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
 
       setIsSubmitting(true);
 
+      const formDataWithSourceAndPage = { ...formData, source: 'drive-software-success', page: 'drive-software-success' };
+
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataWithSourceAndPage),
       });
 
       setIsSubmitting(false);
