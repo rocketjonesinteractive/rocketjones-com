@@ -30,6 +30,10 @@ const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [alreadySubscribed, setAlreadySubscribed] = useState(false);
 
+  const isFormValid = () => {
+    return formData.name.trim() !== '' && formData.email.trim() !== '' && validateEmail(formData.email);
+  };
+
   useLayoutEffect(() => {
     setAlreadySubscribed(localStorage.getItem('alreadySubscribed') === 'true');
   }, []);
@@ -100,6 +104,11 @@ const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
     window.location.href = '/files/rocketjones-article-CEOs-drive-success.pdf';
   };
 
+  const handleDirectDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.href = '/files/rocketjones-article-CEOs-drive-success.pdf';
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
@@ -144,7 +153,7 @@ const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
             onChange={handleChange}
             error={fieldErrors.email}
           />
-          <Button type={'submit'} disabled={isSubmitting}>
+          <Button type={'submit'} disabled={isSubmitting || !isFormValid()}>
             {isSubmitting ? 'Submitting...' : 'Get My Problem-Solving Guide'}
           </Button>
           {formError && <div className={'max-w-xs text-center text-red'}>{formError}</div>}
@@ -161,7 +170,7 @@ const DownloadForm = forwardRef<HTMLFormElement>((props, ref) => {
           <Button variant="tertiary" onClick={backToForm}>
             Back to Form
           </Button>
-          <Button type={'submit'}>Get My Problem-Solving Guide</Button>
+          <Button onClick={handleDirectDownload}>Get My Problem-Solving Guide</Button>
         </>
       )}
     </form>
