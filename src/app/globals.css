@@ -72,6 +72,13 @@ html {
     @apply underline;
 }
 
+.blog-template a.btn-download {
+    @apply !text-white no-underline;
+}
+.blog-template a.btn-download:hover {
+    @apply !text-red underline;
+}
+
 .guide-template h2 {
     @apply text-3xl font-bold mb-8 mt-12 text-black relative font-heading text-center;
 }

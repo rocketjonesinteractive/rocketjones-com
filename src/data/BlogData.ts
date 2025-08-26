@@ -179,21 +179,18 @@ const data: BlogEntry[] = [
   },
   {
     id: 7,
-    title: 'Ready for AI: 5 Automations',
+    title: 'Why Your Business Is More Ready for AI Than You Think',
     image: 'ready-for-ai-5-automations.jpg',
-    caption: 'The companies winning with AI aren\'t the ones with the biggest budgets—they\'re the ones who start small, focus on ordinary tasks, and build from there.',
+    caption: '(+ 5 Achievable, Low-Cost Workflow Automations)',
     author: 'Rocket Jones',
     categories: ['Business Management', 'Workflow Automation', 'AI'],
-    date: new Date('2025-01-15'),
+    date: new Date('2025-08-25'),
     body: ` \
       <p>"We know we should be doing something with AI, but we don't know where to start."</p> \
       <p>This is where most business leaders are right now: Aware of AI and its potential, but unclear on the specifics and unsure of the results.</p> \
       <p>It makes sense. Somewhere north of 80% of AI initiatives fail. Leaders don't want to lose their company millions or waste time trying to implement something that won't pay off.</p> \
       <p>But you don't need to risk millions to see real results.</p> \
-      <aside class="pull-quote"><blockquote> \
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
-      The companies winning with AI aren't the ones with the biggest budgets or the most technical teams—they're the ones who start small, focus on ordinary tasks, and build from there. \
-      </blockquote></aside> \
+      <p>The companies winning with AI aren't the ones with the biggest budgets or the most technical teams—they're the ones who start small, focus on ordinary tasks, and build from there.</p> \
       <h2>The Real AI Revolution Happening Right Now</h2> \
       <p>Forget the Hollywood AI scenarios. The AI transformation happening in 2025 isn't about robots taking over. It's about AI agents that work behind the scenes to eliminate the tedious stuff that bogs down your team.</p> \
       <p>Think of AI agents as the ultimate executive assistant for your entire operation. They don't just answer questions when you ask (that's a chatbot). They work proactively in the background to eliminate the repetitive tasks that slow you down.</p> \
@@ -205,10 +202,7 @@ const data: BlogEntry[] = [
       <h2>The Numbers Don't Lie</h2> \
       <p>Most small businesses are already using AI to make work better and faster. About 68% of small business owners say they are already using AI (Goldman Sachs survey), representing a dramatic jump from previous years. Counter to the narrative, most small businesses using AI, about 80%, said it is enhancing rather than replacing their workforce (Goldman Sachs survey).</p> \
       <p>The majority of SMBs still believe true workflow automation is out of their price range. Larger organizations claim to use automation at a rate of 40% versus only 25% for smaller organizations (Cflow Research). This isn't because small businesses can't benefit from automation. It's because they think it's too complex or expensive to get started.</p> \
-      <aside class="pull-quote"><blockquote> \
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
-      Workflow automation powered by AI agents is effective, and affordable. \
-      </blockquote></aside> \
+      <p>Workflow automation powered by AI agents is effective, and affordable.</p> \
       <p>Workflow automation can reduce repetitive tasks by 60-95% (PointStar Consulting), leading to time savings of up to 77% on routine activities (Kissflow). Even better news: there are a variety of low-code automation systems that require no technical expertise and minimal upfront investment. 1 in 4 businesses are using low-code automation tools that require zero technical skills (Cflow Research).</p> \
       <h2>The 5 Ordinary Tasks That Are Perfect AI Starting Points</h2> \
       <p>So how much is this going to cost you? Not as much as you think. In fact, you probably already have most if not all of tools you need.</p> \
@@ -232,7 +226,7 @@ const data: BlogEntry[] = [
           <div class="md:w-1/2 mt-6 md:mt-0"> \
             <h3 class="text-2xl font-extrabold text-black mb-3">The Business Leader's AI Implementation Guide</h3> \
             <p class="text-gray-800 mb-6">We've put together a quick and comprehensive guide to AI buzzwords, myths, realities, and advice. Find out which ordinary tasks could save your team extraordinary amounts of time starting next week.</p> \
-            <a href="/files/rocketjones-blog-ready-for-ai-5-automations.pdf" download class="inline-block bg-black text-white px-8 py-3 font-bold rounded hover:bg-gray-800 transition-colors">Download Now</a> \
+            <a href="/files/rocketjones-blog-ready-for-ai-5-automations.pdf" download class="btn-download inline-block bg-red !text-white px-8 py-3 font-bold uppercase tracking-wider border-2 border-transparent hover:bg-transparent hover:border-red hover:!text-red transition-colors leading-none">Download Now</a> \
           </div> \
         </div> \
       </div> \
@@ -245,10 +239,7 @@ const data: BlogEntry[] = [
       <h2>Why the Time Is Now (Not Later)</h2> \
       <p>We're seeing this firsthand with our clients. The companies that start implementing AI workflows today aren't just gaining efficiency. They're building sustainable competitive advantages that become harder to replicate over time.</p> \
       <p>The development work that used to take months can now be completed in weeks when you combine skilled human expertise with AI-enhanced workflows. (We're not talking about replacing our team. We're talking about making them unstoppable)</p> \
-      <aside class="pull-quote"><blockquote> \
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
-      AI-enhanced development and operations are becoming table stakes, not differentiators. \
-      </blockquote></aside> \
+      <p>AI-enhanced development and operations are becoming table stakes, not differentiators.</p> \
       <p>The question isn't whether you'll eventually use AI agents in your business. It's whether you'll lead the transformation or scramble to catch up when your competitors start moving twice as fast.</p> \
       <p>Bottom line: You don't need to become a tech company to leverage these tools effectively. You just need to start thinking like one.</p> \
     `,
