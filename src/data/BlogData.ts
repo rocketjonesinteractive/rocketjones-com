@@ -252,7 +252,7 @@ const data: BlogEntry[] = [
     caption: 'A Practical Playbook for SMBs Ready to Leverage AI',
     author: 'Rocket Jones',
     categories: ['AI', 'Workflow Automation', 'Finance'],
-    date: new Date('2025-09-04'),
+    date: new Date('2025-09-03'),
     downloadGate: true,
     body: ` \
       <p>Most small businesses don’t have a finance analyst on payroll. We certainly don’t. And even when we intend to review numbers weekly, urgent client work always takes priority. The result? Missed cash opportunities, late decisions, and financial blind spots that slow growth.</p> \
