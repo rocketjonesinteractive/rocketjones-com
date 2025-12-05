@@ -7,6 +7,7 @@ export interface BlogEntry {
   categories: string[];
   date: Date;
   body: string;
+  downloadGate?: boolean;
 }
 
 const data: BlogEntry[] = [
@@ -176,6 +177,160 @@ const data: BlogEntry[] = [
       <h2>Conclusion</h2> \
       <p>As you consider a custom application for your business, remember that it's a lot like the purchase of a new car. The initial expense of the vehicle itself is only part of the total cost of ownership. The beauty of working with Rocket Jones is not only are we like the car manufacturers, we are also a personal assistant who notifies you of needed maintenance, and we are the trusted mechanic capable of doing the work for you when the time is right for you and your application.</p> \      
     `,
+  },
+  {
+    id: 7,
+    title: 'Why Your Business Is More Ready for AI Than You Think',
+    image: 'ready-for-ai-5-automations.jpg',
+    caption: '(+ 5 Achievable, Low-Cost Workflow Automations)',
+    author: 'Rocket Jones',
+    categories: ['Business Management', 'Workflow Automation', 'AI'],
+    date: new Date('2025-08-25'),
+    body: ` \
+      <p>"We know we should be doing something with AI, but we don't know where to start."</p> \
+      <p>This is where most business leaders are right now: Aware of AI and its potential, but unclear on the specifics and unsure of the results.</p> \
+      <p>It makes sense. Somewhere north of 80% of AI initiatives fail. Leaders don't want to lose their company millions or waste time trying to implement something that won't pay off.</p> \
+      <p>But you don't need to risk millions to see real results.</p> \
+      <p>The companies winning with AI aren't the ones with the biggest budgets or the most technical teams—they're the ones who start small, focus on ordinary tasks, and build from there.</p> \
+      <h2>The Real AI Revolution Happening Right Now</h2> \
+      <p>Forget the Hollywood AI scenarios. The AI transformation happening in 2025 isn't about robots taking over. It's about AI agents that work behind the scenes to eliminate the tedious stuff that bogs down your team.</p> \
+      <p>Think of AI agents as the ultimate executive assistant for your entire operation. They don't just answer questions when you ask (that's a chatbot). They work proactively in the background to eliminate the repetitive tasks that slow you down.</p> \
+      <p>Here's what this looks like in practice: Your project management tool automatically generates weekly status reports, identifies which projects are at risk, and sends personalized updates to stakeholders—all while you're focused on closing deals or developing strategy.</p> \
+      <h2>Instead of End-to-End, Think Middle-to-Middle</h2> \
+      <p>Most AI vendors are selling dreams of "end-to-end" automation that frankly aren't ready for prime time. The real value (and the proven ROI) comes from what's often called human-in-the-loop AI or "middle-to-middle" approaches.</p> \
+      <p>The workflow: Human creates the request → AI agent processes and analyzes → Human validates and takes action.</p> \
+      <p>This approach gives you the efficiency gains of automation while keeping humans in control of critical decisions. It's also where you can start seeing results immediately, not someday in the theoretical future.</p> \
+      <h2>The Numbers Don't Lie</h2> \
+      <p>Most small businesses are already using AI to make work better and faster. About 68% of small business owners say they are already using AI (Goldman Sachs survey), representing a dramatic jump from previous years. Counter to the narrative, most small businesses using AI, about 80%, said it is enhancing rather than replacing their workforce (Goldman Sachs survey).</p> \
+      <p>The majority of SMBs still believe true workflow automation is out of their price range. Larger organizations claim to use automation at a rate of 40% versus only 25% for smaller organizations (Cflow Research). This isn't because small businesses can't benefit from automation. It's because they think it's too complex or expensive to get started.</p> \
+      <p>Workflow automation powered by AI agents is effective, and affordable.</p> \
+      <p>Workflow automation can reduce repetitive tasks by 60-95% (PointStar Consulting), leading to time savings of up to 77% on routine activities (Kissflow). Even better news: there are a variety of low-code automation systems that require no technical expertise and minimal upfront investment. 1 in 4 businesses are using low-code automation tools that require zero technical skills (Cflow Research).</p> \
+      <h2>The 5 Ordinary Tasks That Are Perfect AI Starting Points</h2> \
+      <p>So how much is this going to cost you? Not as much as you think. In fact, you probably already have most if not all of tools you need.</p> \
+      <p>Most growing businesses are sitting on automation opportunities using software they're already paying for. Here are the five most common places to start:</p> \
+      <h3>1. Project Status Reports</h3> \
+      <p>Your Asana or Monday.com can automatically track project health, identify bottlenecks, and send personalized updates to stakeholders—no more spending Friday afternoons writing status emails.</p> \
+      <h3>2. Customer Support Routing</h3> \
+      <p>Automatically categorize support tickets by complexity, route simple questions to your knowledge base, and escalate urgent issues with full context to the right team member.</p> \
+      <h3>3. Invoice and Expense Processing</h3> \
+      <p>Connect your QuickBooks to automatically categorize expenses, flag items for approval, and route invoices through your approval workflow.</p> \
+      <h3>4. Lead Qualification</h3> \
+      <p>Your CRM can automatically score new leads based on criteria you define, send personalized follow-up sequences, and alert your sales team when someone's ready to buy.</p> \
+      <h3>5. Data Quality Checks</h3> \
+      <p>Set up automatic monitoring to identify duplicate records, missing information, and inconsistencies across your systems before they cause problems.</p> \
+      <p>Want the step-by-step playbook? Our free implementation guide walks you through exactly how to set up each of these workflows, including which tools to use and how to connect them together. You'll also get a 30-day action plan to go from AI-curious to AI-enabled without the overwhelm.</p> \
+      <div class="my-12 bg-white rounded-lg"> \
+        <div class="flex flex-col md:flex-row items-center md:items-start p-6"> \
+          <div class="md:w-1/2 flex justify-center md:justify-start md:pr-6"> \
+            <img src="/img/blog/ready-for-ai-5-automations-download-preview.png" alt="The Business Leader's AI Implementation Guide Preview" class="w-[320px] max-w-full rotate-[-6deg] drop-shadow-2xl" /> \
+          </div> \
+          <div class="md:w-1/2 mt-6 md:mt-0"> \
+            <h3 class="text-2xl font-extrabold text-black mb-3">The Business Leader's AI Implementation Guide</h3> \
+            <p class="text-gray-800 mb-6">We've put together a quick and comprehensive guide to AI buzzwords, myths, realities, and advice. Find out which ordinary tasks could save your team extraordinary amounts of time starting next week.</p> \
+            <a href="/files/rocketjones-blog-ready-for-ai-5-automations.pdf" download class="btn-download inline-block bg-red !text-white px-8 py-3 font-bold uppercase tracking-wider border-2 border-transparent hover:bg-transparent hover:border-red hover:!text-red transition-colors leading-none">Download Now</a> \
+          </div> \
+        </div> \
+      </div> \
+      <h2>The Real Question: How Ready Is Your Business?</h2> \
+      <p>Most business leaders know they should be leveraging AI, but they're not sure where they stand. The truth is, your readiness has less to do with your technical sophistication and more to do with three critical factors:</p> \
+      <p><strong>Data Quality:</strong> How organized and accessible is your business information? AI is only as good as the data it works with.</p> \
+      <p><strong>Process Maturity:</strong> Do you have documented workflows, or is everything still "tribal knowledge"? AI amplifies good processes and exposes bad ones.</p> \
+      <p><strong>Growth Mindset:</strong> Are you willing to experiment and iterate, or do you need everything to be perfect before you start?</p> \
+      <p>If you have decent systems in place and the appetite to improve them, you're probably more ready than you think.</p> \
+      <h2>Why the Time Is Now (Not Later)</h2> \
+      <p>We're seeing this firsthand with our clients. The companies that start implementing AI workflows today aren't just gaining efficiency. They're building sustainable competitive advantages that become harder to replicate over time.</p> \
+      <p>The development work that used to take months can now be completed in weeks when you combine skilled human expertise with AI-enhanced workflows. (We're not talking about replacing our team. We're talking about making them unstoppable)</p> \
+      <p>AI-enhanced development and operations are becoming table stakes, not differentiators.</p> \
+      <p>The question isn't whether you'll eventually use AI agents in your business. It's whether you'll lead the transformation or scramble to catch up when your competitors start moving twice as fast.</p> \
+      <p>Bottom line: You don't need to become a tech company to leverage these tools effectively. You just need to start thinking like one.</p> \
+    `,
+  },
+  {
+    id: 8,
+    title: 'We Built a Weekly Finance Analyst with AI and It Paid for Itself in 7 Days',
+    image: 'weekly-finance-analyst-ai-paid-itself-7-days.jpg',
+    caption: 'A Practical Playbook for SMBs Ready to Leverage AI',
+    author: 'Rocket Jones',
+    categories: ['AI', 'Workflow Automation', 'Finance'],
+    date: new Date('2025-09-03'),
+    body: ` \
+      <p>Most small businesses don’t have a finance analyst on payroll. We certainly don’t. And even when we intend to review numbers weekly, urgent client work always takes priority. The result? Missed cash opportunities, late decisions, and financial blind spots that slow growth.</p> \
+      <p>We know plenty of founders are in the same position. So instead of hiring an analyst, we built one.</p> \
+      <p>In its first week on the job, it helped us collect $24K in outstanding AR and gave us back ~3 hours a week. Let’s walk through how we did it — and how you can too.</p> \
+      <h2>The Expensive Habit of “We’ll Get to It Later”</h2> \
+      <p>Like most SMBs, we knew what needed to be done: review pipeline, accounts receivable, and expenses every week. But when you’re prioritizing growth, client work, and operations, those reviews often fell down the to-do list.</p> \
+      <p>This is the reality of limited bandwidth for a lot of teams. But inconsistency comes with costs: cash tied up in uncollected receivables, expense anomalies that went unnoticed, and decisions made without a clear picture of the numbers.</p> \
+      <p>That gap between intention and execution is exactly why we built a workflow to act on our behalf—ensuring those critical insights aren’t getting lost in the shuffle.</p> \
+      <h2>Breaking Down Our First Workflow</h2> \
+      <p>We kept the first version intentionally simple. The goal was consistency and clarity, not sophistication. Here’s what the architecture looks like:</p> \
+      <img src="/img/blog/weekly-finance-analyst-architecture.png" alt="Beginner Finance Analyst Architecture" /> \
+      <p>The actual components of the workflow are fairly straightforward—here’s a quick breakdown of what each part does:</p> \
+      <ul> \
+        <li><strong>Schedule Trigger</strong> → This tells the workflow to run automatically at the same time each week, so nothing falls through the cracks.</li> \
+        <li><strong>AI Agent (GPT-4o)</strong> → Think of this as our virtual financial analyst. It reviews our financial documents and highlights key trends, anomalies, and opportunities.</li> \
+        <li><strong>Memory Module</strong> → This ensures the AI remembers past results to track week-over-week trends, so it can surface valuable insights in context.</li> \
+        <li><strong>Dropbox</strong> → This is the storage space for our financial documents—income statements, balance sheets, and year-over-year comparisons.</li> \
+        <li><strong>Slack</strong> → The AI sends a concise, easy-to-read report straight to our team, including KPIs, action items, and any red flags.</li> \
+      </ul> \
+      <aside class="pull-quote" style="float:none;width:100%;padding-left:0;margin-left:0;clear:both"><blockquote> \
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
+      We kept V1 intentionally simple because the goal was to create something immediately useful. The purpose wasn’t to pour time into sophisticated features that might not solve real problems. Complexity can come later, once we understand what truly adds value. \
+      </blockquote></aside> \
+      <h2>Never Built a Workflow? Don’t Worry About It.</h2> \
+      <p>If you’ve never built a workflow before, it can feel intimidating—and that’s normal. Tools like <a href="https://n8n.io" target="_blank" rel="noopener noreferrer">n8n.io</a> (which has a free version) or <a href="https://zapier.com" target="_blank" rel="noopener noreferrer">Zapier</a> (a less flexible, but more user-friendly option) provide drag-and-drop builders that make automation approachable, even for non-technical users.</p> \
+      <p>We used n8n to build this workflow, and while it’s intuitive, there were definitely moments where we had to troubleshoot and do a little digging. If you’re completely new to workflow tools, expect a learning curve and occasional roadblocks. It’s not always seamless—but it’s far more manageable than coding something yourself, and there are lots of online resources to guide you through.</p> \
+      <p>The workflow itself is only one piece of the puzzle. The real impact comes from how you instruct the AI. The quality of your prompt determines whether the output is generic or truly actionable, helping you make smarter decisions and run your business more efficiently.</p> \
+      <img src="/img/blog/weekly-finance-analyst-architecture-1.png" alt="Finance Analyst Architecture" /> \
+      <h2>The Prompt That Made It Work</h2> \
+      <p>We asked GPT-4o to embody a financial analyst with a clear role description: analyze uploaded financial documents and provide specific, prioritized action items to help improve business efficiency and growth.</p> \
+      <p>To guide it, we supplied a structured, repeatable framework. The AI follows these steps: assess overall financial health, analyze revenue patterns and short-term forecasts, flag expense inefficiencies, and project cash flow to anticipate timing risks.</p> \
+      <p>And here’s the output format we requested: Provide an executive summary (2–3 sentences), the top 5 action items (with priority, rationale, timing, etc.), a financial forecast for the next 3 months, and alert any red flags (cash crunches, anomalies, risks)</p> \
+      <p>This setup ensures that GPT-4o delivers insights in a consistent, actionable format every week.</p> \
+      <div class="my-8 bg-white rounded-lg"> \
+        <div class="p-6"> \
+          <h3 class="text-2xl font-extrabold text-black mb-3">The Finance Analyst Prompt</h3> \
+          <p class="text-gray-800 mb-6">Want to put it to use? Grab the exact prompt we use to drive consistent, actionable insights each week.</p> \
+          <a href="/files/weekly-finance-analyst-prompt.pdf" download class="btn-download inline-block bg-red !text-white px-8 py-3 font-bold uppercase tracking-wider border-2 border-transparent hover:bg-transparent hover:border-red hover:!text-red transition-colors leading-none">Get the Prompt</a> \
+        </div> \
+      </div> \
+      <h2>Applying This Approach Across Your Business</h2> \
+      <p>If you want to use this framework to tackle other gaps in your organization, start with the simplest version. Don’t overthink the first draft.</p> \
+      <ul> \
+        <li>Pick a single workflow (like financial analysis).</li> \
+        <li>Keep your inputs clean (consistent file naming, Dropbox folder structure).</li> \
+        <li>Use human-in-the-loop review: don’t act on recommendations blindly.</li> \
+        <li>Add complexity later: enrich with details like bank feeds, CRM, payroll, or anomaly detection.</li> \
+      </ul> \
+      <h2>A Note on Data Safety</h2> \
+      <p>As you adapt this workflow to other parts of your business, remember: working with financial data (or any sensitive data for that matter) requires extra care.</p> \
+      <p>It’s important to slow down and get the basics right:</p> \
+      <ul> \
+        <li>Don’t paste financials into free chat tools. Use API or enterprise-level access.</li> \
+        <li>Choose your hosting wisely: self-hosted n8n is most secure, cloud-hosted is convenient but requires trust.</li> \
+        <li>Data retention matters: n8n deletes AI data after 30 days — understand what’s stored vs. what’s transient.</li> \
+        <li>Anonymize where possible: strip out client names or identifiers before sending to the agent.</li> \
+        <li>Check vendor policies: demand clarity on how providers handle training, retention, and deletion.</li> \
+      </ul> \
+      <aside class="pull-quote" style="float:none;width:100%;padding-left:0;margin-left:0;clear:both"><blockquote> \
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="37" fill="none" class="mb-2 text-red"><path fill="currentColor" d="M0 15.61c0-4.792 3.836-8.672 8.571-8.672h.572c1.264 0 2.286 1.033 2.286 2.312 0 1.28-1.022 2.313-2.286 2.313H8.57c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625H4.57C2.05 30.063 0 27.988 0 25.438v-9.829Zm18.286 0c0-4.792 3.835-8.672 8.571-8.672h.572c1.264 0 2.285 1.033 2.285 2.312 0 1.28-1.021 2.313-2.285 2.313h-.572c-2.207 0-4 1.813-4 4.046v.579h4.572c2.521 0 4.571 2.074 4.571 4.625v4.625c0 2.55-2.05 4.625-4.571 4.625h-4.572c-2.521 0-4.571-2.075-4.571-4.625v-9.829Z"></path></svg> \
+      Security and convenience can coexist, but it takes intentional effort. Handling sensitive data responsibly isn’t optional—getting the basics right protects your business and ensures the insights you receive are reliable. \
+      </blockquote></aside> \
+      <h2>Humans Still Matter</h2> \
+      <p>This workflow isn’t a magical solution. AI can misinterpret data, hallucinate, or produce misleading insights if your inputs aren’t clean. That’s why human oversight remains essential. Every recommendation should be validated by a team member before action is taken.</p> \
+      <p>Think of AI as a junior analyst: it saves time by doing the grunt work, but a manager still reviews before decisions get made. We maintain consistent naming conventions, version control, and keep a detailed audit trail to ensure accountability. Ultimately, AI only amplifies a good process, it doesn’t replace the need for one.</p> \
+      <h2>What’s Coming Next?</h2> \
+      <p>This project gave us confidence, and now we’re expanding its capabilities. Here’s what we’re working on now:</p> \
+      <ul> \
+        <li><strong>Scenario modeling</strong>: If revenue suddenly dips 20%, we’ll know exactly how long we can keep paying salaries and what levers we need to pull first.</li> \
+        <li><strong>Cash runway forecasting</strong>: Instead of vague guesses, we’ll see how many months of operating costs we can cover before things get tight.</li> \
+        <li><strong>Vendor optimization</strong>: If a vendor is quietly overcharging us or a contract could be renegotiated, we’ll catch it sooner and save money.</li> \
+        <li><strong>CRM integration for real-time forecasting</strong>: By pulling in future potential sales from our CRM, we’ll get a clearer picture of cash flow to guide operational planning.</li> \
+        <li><strong>Automated nudges</strong>: Our team will get gentle reminders to follow up on overdue invoices or review flagged expenses, so small issues don’t snowball.</li> \
+      </ul> \
+      <p>And if there’s enough demand, we may even package this workflow as a product for other SMBs. If you think a solution like this could help your business, drop us a line—we’d love to hear from you.</p> \
+      <p>Ultimately, the lesson is simple: AI doesn’t have to be complex to create real value. By starting small, keeping humans in the loop, and solving a tangible problem, we turned a weekly chore into a workflow that saves time, smooths cash flow, and builds confidence in our numbers. Small, thoughtfully executed AI projects can pay for themselves fast.</p> \
+      <p>Stay tuned! Once we’ve added a few new features and refined the workflow further, we’ll share a second installment with an even deeper look at how this approach can transform your everyday operations.</p> \
+      `,
   },
 ];
 

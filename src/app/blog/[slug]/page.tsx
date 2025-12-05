@@ -9,6 +9,7 @@ import { ScrollToTop } from '@/components/ui/molecules/ScrollToTop/ScrollToTop.t
 import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay.tsx';
 import { Contact } from '@/components/ui/organisms/Contact/Contact.tsx';
 import Image from 'next/image';
+import { BlogDownloadGate } from '@/components/ui/molecules/DownloadGate/BlogDownloadGate.tsx';
 export default function Page({ params }: { params: { slug: string } }) {
   const data = blogEntries.find((x) => slugify(x.title) === params.slug);
 
@@ -67,6 +68,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           __html: data.body,
         }}
       />
+      {data.downloadGate && <BlogDownloadGate />}
       <div
         className={
           'container mx-auto my-16 w-3/4 max-w-[700px] border-2 border-zinc-200 p-8 text-lg lg:w-1/2'
