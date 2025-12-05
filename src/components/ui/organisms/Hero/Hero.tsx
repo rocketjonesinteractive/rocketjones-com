@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/atoms/Button/Button';
 import ChevronDown from '@/../public/img/icons/chevron-down.svg';
 import { BgOverlay } from '@/components/ui/atoms/BgOverlay/BgOverlay';
@@ -24,8 +24,8 @@ export const Hero = () => {
     >
       <BgOverlay />
       <div className="container relative z-10 flex flex-col items-center px-4 text-center">
-        <HeroHeading>Boost Your Business</HeroHeading>
-        <HeroTypewriter />
+        <HeroHeading>You&apos;re Going Places</HeroHeading>
+        <HeroSubheading>We Make Sure Your Technology Keeps Up</HeroSubheading>
         <HeroDescription />
         <HeroCTA onOpenVideoClick={() => toggleVideoOpen('156733981', 'Rocket Jones: Overview')} />
       </div>
@@ -39,7 +39,7 @@ export const HeroHeading = ({ children }: { children: ReactNode }) => {
   return (
     <h2
       className={
-        'text-md relative inline-block font-heading text-white sm:text-2xl md:text-[36px] ' +
+        'relative inline-block font-heading text-lg font-bold uppercase tracking-widest text-white sm:text-xl md:text-2xl ' +
         "before:absolute before:left-[-40px] before:top-1/2 before:h-[2px] before:w-[30px] before:bg-red before:content-[''] " +
         "after:absolute after:right-[-40px] after:top-1/2 after:h-[2px] after:w-[30px] after:bg-red after:content-['']"
       }
@@ -49,73 +49,30 @@ export const HeroHeading = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroTypewriter = () => {
-  const messages = useMemo(
-    () => ['MOBILE', 'WEB', 'CLOUD', 'DESIGN', 'DATA', 'SECURITY', 'ENTERPRISE', 'SAAS'],
-    [],
-  );
-  const animTimeout = useRef<NodeJS.Timeout | null>();
-  const [currentMessage, setCurrentMessage] = useState(messages[0]);
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  useEffect(() => {
-    animTimeout.current = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev === messages.length - 1 ? 0 : prev + 1));
-        setCurrentMessage(messages[currentIndex]);
-        setIsTransitioning(false);
-      }, 1000);
-    }, 3000);
-
-    return () => {
-      if (animTimeout.current !== null) clearInterval(animTimeout.current);
-    };
-  }, [currentIndex, messages]);
-
+export const HeroSubheading = ({ children }: { children: ReactNode }) => {
   return (
-    <div
-      className={
-        'my-4 font-heading text-[32px] font-bold uppercase leading-none text-white md:text-[48px] lg:text-[64px]'
-      }
-    >
-      <span
-        className={'mr-2 inline-block overflow-hidden transition-all duration-1000 md:mr-3 lg:mr-4'}
-      >
-        We Know{' '}
-      </span>
-      <span
-        className={`typetext inline-block overflow-hidden text-red transition-all duration-1000 ease-in-out ${
-          isTransitioning ? 'max-w-[0px]' : 'max-w-[1000px]'
-        }`}
-      >
-        {currentMessage}&nbsp;
-      </span>
-      <span
-        className={
-          'inline-block w-[1px] animate-blink overflow-hidden border-r-2 border-r-white/50'
-        }
-      >
-        &nbsp;
-      </span>
-    </div>
+    <h3 className="my-6 font-heading text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">
+      {children}
+    </h3>
   );
 };
 
 export const HeroDescription = () => {
   return (
-    <div className={'mb-8 font-heading text-sm text-white [text-wrap:balance] md:text-base'}>
-      Streamline and grow your business with custom app development by Rocket Jones.
+    <div className={'mx-auto mb-10 max-w-3xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
+      Your old software served you well, but now you need tools that scale with your ambitions.
+      <br />
+      <br />
+      Rocket Jones is a full-service development agency for businesses that depend on web technology. We partner with you to upgrade old sites and systems, get everything connected, automate routine work, and build custom tools where it makes sense.
     </div>
   );
 };
 
 export const HeroCTA = ({ onOpenVideoClick }: { onOpenVideoClick: () => void }) => {
   return (
-    <div className={'flex flex-col gap-2 sm:flex-row'}>
+    <div className={'flex flex-col gap-4 sm:flex-row'}>
       <Button variant={'secondary'} onClick={() => scrollToElementId('contact')}>
-        Free Consultation
+        Tell Us What&apos;s Holding You Back
       </Button>
       <Button variant={'primary'} onClick={onOpenVideoClick}>
         &#x25BA;&nbsp;&nbsp;Watch Video
