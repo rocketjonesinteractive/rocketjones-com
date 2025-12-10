@@ -18,7 +18,7 @@ export const Hero = () => {
 
   return (
     <div
-      className={`flex min-h-screen items-center justify-center overflow-hidden bg-black pt-[var(--header-height)] ${
+      className={`relative flex min-h-screen items-center justify-center overflow-hidden bg-black pb-24 pt-[var(--header-height)] ${
         bgType === 'image' ? 'bg-hero bg-cover bg-center bg-no-repeat' : ''
       }`}
     >
@@ -26,8 +26,9 @@ export const Hero = () => {
       <div className="container relative z-10 flex flex-col items-center px-4 text-center">
         <HeroHeading>You&apos;re Going Places</HeroHeading>
         <HeroSubheading>We Make Sure Your Technology Keeps Up</HeroSubheading>
-        <HeroDescription />
+        <HeroDescriptionTop />
         <HeroCTA onOpenVideoClick={() => toggleVideoOpen('156733981', 'Rocket Jones: Overview')} />
+        <HeroDescriptionBottom />
       </div>
       <ScrollDownArrow />
       {bgType === 'video' && <HeroBgVideo />}
@@ -57,12 +58,17 @@ export const HeroSubheading = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const HeroDescription = () => {
+export const HeroDescriptionTop = () => {
   return (
     <div className={'mx-auto mb-10 max-w-3xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
       Your old software served you well, but now you need tools that scale with your ambitions.
-      <br />
-      <br />
+    </div>
+  );
+};
+
+export const HeroDescriptionBottom = () => {
+  return (
+    <div className={'mx-auto mt-10 max-w-3xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
       Rocket Jones is a full-service development agency for businesses that depend on web technology. We partner with you to upgrade old sites and systems, get everything connected, automate routine work, and build custom tools where it makes sense.
     </div>
   );
@@ -85,7 +91,7 @@ export const ScrollDownArrow = () => {
   return (
     <div
       className={
-        'absolute bottom-[20px] z-10 flex h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-[18px] bg-red text-white transition-all hover:scale-125 hover:bg-white hover:text-red sm:bottom-[40px] lg:bottom-[80px]'
+        'absolute bottom-[20px] z-10 hidden h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-[18px] bg-red text-white transition-all hover:scale-125 hover:bg-white hover:text-red lg:flex lg:bottom-[80px]'
       }
       onClick={() => scrollToElementId('about')}
     >
