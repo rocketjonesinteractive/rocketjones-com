@@ -24,11 +24,10 @@ export const Hero = () => {
     >
       <BgOverlay />
       <div className="container relative z-10 flex flex-col items-center px-4 text-center">
-        <HeroHeading>You&apos;re Going Places</HeroHeading>
-        <HeroSubheading>We Make Sure Your Technology Keeps Up</HeroSubheading>
+        <HeroHeading>Your Business is Growing</HeroHeading>
+        <HeroSubheading>Make Sure Your Technology Keeps Up</HeroSubheading>
         <HeroDescriptionTop />
-        <HeroCTA onOpenVideoClick={() => toggleVideoOpen('156733981', 'Rocket Jones: Overview')} />
-        <HeroDescriptionBottom />
+        <HeroCTA />
       </div>
       <ScrollDownArrow />
       {bgType === 'video' && <HeroBgVideo />}
@@ -74,14 +73,11 @@ export const HeroDescriptionBottom = () => {
   );
 };
 
-export const HeroCTA = ({ onOpenVideoClick }: { onOpenVideoClick: () => void }) => {
+export const HeroCTA = () => {
   return (
     <div className={'flex flex-col gap-4 sm:flex-row'}>
       <Button variant={'secondary'} onClick={() => scrollToElementId('contact')}>
         Tell Us What&apos;s Holding You Back
-      </Button>
-      <Button variant={'primary'} onClick={onOpenVideoClick}>
-        &#x25BA;&nbsp;&nbsp;Watch Video
       </Button>
     </div>
   );
