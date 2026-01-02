@@ -18,9 +18,9 @@ export default function Home() {
     <main id={'top'}>
       <Hero />
       <About />
-      <Promise />
-      <Process />
       <Testimonials />
+      <Process />
+      <Promise />
       <Technology />
       <GuideCta />
       <Stats />
