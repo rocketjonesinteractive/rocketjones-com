@@ -51,7 +51,7 @@ export const HeroHeading = ({ children }: { children: ReactNode }) => {
 
 export const HeroSubheading = ({ children }: { children: ReactNode }) => {
   return (
-    <h3 className="my-6 font-heading text-4xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">
+    <h3 className="my-6 font-heading text-2xl font-extrabold leading-tight text-white md:text-4xl lg:text-5xl">
       {children}
     </h3>
   );

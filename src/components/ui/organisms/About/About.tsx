@@ -12,7 +12,7 @@ export const About = () => {
     <Section id={'about'}>
       <SectionHeading caption={''} title={<>Who We Are</>} />
       <div className="mx-auto mb-16 max-w-3xl px-4 text-center text-base leading-relaxed text-black md:text-lg">
-        Rocket Jones is a team of US-based developers with a 22+ year track record of successfully designing, rebuilding, and supporting modern custom software that enables growing companies to operate faster and scale confidently.
+        Rocket Jones is a team of US-based developers with a 22+ year track record of successfully designing, building, and supporting software that enables growing businesses to operate efficiently and scale confidently.
       </div>
       <div className="mx-4 grid grid-cols-1 items-start justify-center gap-8 md:mx-8 md:gap-16 lg:grid-cols-3">
         <AboutTile
