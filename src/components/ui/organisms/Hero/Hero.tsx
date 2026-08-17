@@ -24,8 +24,8 @@ export const Hero = () => {
     >
       <BgOverlay />
       <div className="container relative z-10 flex flex-col items-center px-4 text-center">
-        <HeroHeading>Your Business is Growing</HeroHeading>
-        <HeroSubheading>Make Sure Your Technology Keeps Up</HeroSubheading>
+        <HeroHeading>Stop Working Around Your Software</HeroHeading>
+        <HeroSubheading>Start Building It Around You</HeroSubheading>
         <HeroDescriptionTop />
         <HeroCTA />
       </div>
@@ -60,7 +60,9 @@ export const HeroSubheading = ({ children }: { children: ReactNode }) => {
 export const HeroDescriptionTop = () => {
   return (
     <div className={'mx-auto mb-10 max-w-3xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
-      Your old software served you well, but now you need tools that scale with your ambitions.
+      Most software asks you to bend your business to fit it when what you need is software that fits your business, your
+      future, your goals. With AI-assisted development and a team of top-tier engineers, custom is more within reach than
+      it&apos;s ever been.
     </div>
   );
 };
