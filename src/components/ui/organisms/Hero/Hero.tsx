@@ -59,10 +59,10 @@ export const HeroSubheading = ({ children }: { children: ReactNode }) => {
 
 export const HeroDescriptionTop = () => {
   return (
-    <div className={'mx-auto mb-10 max-w-3xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
+    <div className={'mx-auto mb-10 max-w-5xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
       Most software asks you to bend your business to fit it when what you need is software that fits your business, your
-      future, your goals. With AI-assisted development and a team of top-tier engineers, custom is more within reach than
-      it&apos;s ever been.
+      future, your goals. With cutting edge development tools and a team of top-tier engineers, custom is more within
+      reach than it&apos;s ever been.
     </div>
   );
 };
