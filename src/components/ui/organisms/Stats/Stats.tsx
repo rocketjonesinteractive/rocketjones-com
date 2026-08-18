@@ -1,17 +1,15 @@
 import { ReactNode } from 'react';
 import Users from '@/../public/img/icons/users.svg';
 import Building from '@/../public/img/icons/building.svg';
-import Database from '@/../public/img/icons/database.svg';
 import { AnimateOnScrollDiv } from '@/components/ui/molecules/AnimateOnScrollDiv/AnimateOnScroll';
 import { addDelay, animationVariants } from '@/utils/animations';
 
 export const Stats = () => {
   return (
     <div className={'overflow-hidden p-16 ' + 'bg-tan'}>
-      <div className="container flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16">
+      <div className="container flex flex-col items-center justify-center gap-8 md:flex-row md:gap-0">
         <Stat value={'8+ Years'} caption={'Avg. Partnership'} icon={<Users />} animDelay={0} />
         <Stat value={'22 Years'} caption={'In Business'} icon={<Building />} animDelay={0.2} />
-        <Stat value={'500+'} caption={'Terabytes Managed'} icon={<Database />} animDelay={0.4} />
       </div>
     </div>
   );
@@ -31,7 +29,7 @@ const Stat = ({
   return (
     <AnimateOnScrollDiv
       variants={addDelay(animationVariants.stat, animDelay ?? 0)}
-      className="w-full md:w-1/3"
+      className="w-full md:w-1/2"
     >
       <div className="flex flex-col items-center justify-center gap-4 text-center">
         <div className={'text-red'}>{icon}</div>

@@ -48,7 +48,7 @@ export const Promise = ({ numColumns = 3 }: { numColumns?: 2 | 3 }) => {
           <PromiseTile
             title={'Communication'}
             description={
-              'We have a knack for making the complex simple. If you ever have a question or concern during any part of your project, send us an email or give us a call. We are here to help.'
+              'Custom software is intimidating even for the most seasoned technical leaders, but it doesn’t have to be. We make the complex simple, and we don’t disappear between milestones.'
             }
             icon={<MessageChat className={'text-red'} />}
             animDelay={0}
@@ -56,7 +56,7 @@ export const Promise = ({ numColumns = 3 }: { numColumns?: 2 | 3 }) => {
           <PromiseTile
             title={'Quality'}
             description={
-              'We are good at what we do, and we promise the highest quality solutions possible. We deliver beautiful, secure, and scalable software.'
+              'We don’t cut corners, technical or otherwise. We follow best practices in code development and in testing, and the platforms we recommend are always industry-proven and well-supported.'
             }
             icon={<CheckCircle className={'text-red'} />}
             animDelay={0.2}
@@ -64,7 +64,7 @@ export const Promise = ({ numColumns = 3 }: { numColumns?: 2 | 3 }) => {
           <PromiseTile
             title={'Honesty'}
             description={
-              'Surprises are for birthdays, not invoices. We constantly communicate, and we stick to the budget. If changes are required, the final decision is always the customer’s.'
+              'Surprises are for birthdays, not invoices. We constantly communicate, and we stick to the budget. If changes are required, the final decision is always yours.'
             }
             icon={<BankNote className={'text-red'} />}
             animDelay={0.4}

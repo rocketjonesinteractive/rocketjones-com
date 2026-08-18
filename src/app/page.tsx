@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <main id={'top'}>
       <Hero />
-      <About />
       <Testimonials />
-      <Process />
+      <About />
+      <Stats />
       <Promise />
+      <Process />
       <Technology />
       <GuideCta />
-      <Stats />
       <FreeConsultation />
       <Blog />
       <Contact />

@@ -54,7 +54,7 @@ export const Testimonials = () => {
 
   return (
     <>
-      <div key={testimonial.company} className={'grid grid-cols-6 overflow-hidden'}>
+      <div id={'case-studies'} key={testimonial.company} className={'grid grid-cols-6 overflow-hidden'}>
         <div
           className={`relative col-span-6 flex min-h-[300px] items-center justify-center bg-zinc-800 bg-cover bg-center bg-no-repeat md:col-span-3 lg:col-span-2 bg-project${testimonial.key}1`}
         >

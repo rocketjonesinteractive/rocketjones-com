@@ -11,34 +11,44 @@ export const About = () => {
   return (
     <Section id={'about'}>
       <SectionHeading caption={''} title={<>Who We Are</>} />
-      <div className="mx-auto mb-16 max-w-3xl px-4 text-center text-base leading-relaxed text-black md:text-lg">
-        Rocket Jones is a team of US-based developers with a 22+ year track record of successfully designing, building, and supporting software that enables growing businesses to operate efficiently and scale confidently.
+      <div className="mx-auto mb-16 max-w-3xl px-4 text-center text-base leading-relaxed md:text-lg">
+        Custom doesn&apos;t mean big or expensive. It means built around you. For over 22 years, Rocket Jones has built
+        custom software for growing businesses. From small, targeted applications and integrations to large-scale
+        platforms, we&apos;ve seen it and done it.
       </div>
       <div className="mx-4 grid grid-cols-1 items-start justify-center gap-8 md:mx-8 md:gap-16 lg:grid-cols-3">
         <AboutTile
-          title={'Modernize'}
+          title={'Advise'}
           description={
-            'Replace those outdated systems that are slow, brittle, and hard to maintain with modern, high-performance custom tools tailored to how your business actually works.'
+            "You need a partner that listens, not another sales pitch. Before a direction gets recommended we spend time understanding your project, your needs and your constraints, because we believe there's no “one size fits all” in software."
           }
-          icon={<Hourglass />}
+          icon={<Phone />}
           animDelay={0}
         />
         <AboutTile
-          title={'Integrate Systems'}
+          title={'Modernize'}
           description={
-            "Tired of moving between disparate systems that don't communicate? We get internal and cloud-based software to communicate, ensuring your business is fully integrated."
+            "Replace software that's slow and hard to maintain with tools built on a modern platform, aimed where your business is going. Connect your internal and cloud-based systems so information flows automatically."
           }
-          icon={<Phone />}
+          icon={<Hourglass />}
           animDelay={0.2}
         />
         <AboutTile
-          title={'Stay Current'}
+          title={'Sustain'}
           description={
-            'We offer ongoing support and maintenance so your app can adapt to your business needs, operate without downtime, and stay current with the latest updates.'
+            'Launch is the beginning, not the finish line. We plan and partner with you for the long-term, so you have the support you need as your business grows.'
           }
           icon={<UploadCloud />}
           animDelay={0.4}
         />
+      </div>
+      <div className={'mx-auto mt-16 max-w-3xl px-4 text-base leading-relaxed md:text-lg'}>
+        <div className={'font-heading font-bold'}>What&apos;s with the name?</div>
+        <p className={'mt-2'}>
+          Glad you asked. &ldquo;Rocket&rdquo; is for the part of us that geeks out over clean code and hard problems.
+          &ldquo;Jones&rdquo; is for the part that still answers the phone and doesn&apos;t make you feel dumb for asking
+          a basic question. Most dev agencies make you pick one. We don&apos;t.
+        </p>
       </div>
     </Section>
   );

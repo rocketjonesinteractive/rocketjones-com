@@ -24,7 +24,7 @@ export const Process = () => {
         <ProcessTile
           title={'Explore + Imagine'}
           description={
-            "Contact Rocket Jones to schedule time so we can get to know you and your company and learn about your story. We will ask questions, listen, and identify your priorities and workflow. The goal is a complete understanding of the app's context, users, and tasks, with a cost estimate as an output."
+            'Some clients come to us knowing exactly what they need, but most come with a vision, a pain point, or an idea that hasn’t taken shape yet. We genuinely enjoy this stage: identifying the possibilities, defining the scope, and finding the right approach together. Most projects can be scoped quickly at no charge. Larger projects that need multiple planning sessions may involve a paid Discovery phase, but we’ll always tell you that upfront, before it starts.'
           }
           stage={1}
           animDelay={0.2}
@@ -34,7 +34,7 @@ export const Process = () => {
         <ProcessTile
           title={'Plan + Sketch'}
           description={
-            'Just as an architect creates a blueprint for a custom home, we build a blueprint for your custom application based on what we learn during Stage 1. During this stage we work closely with you, sharing ideas and collaborating back and forth. By getting everything on paper, you know exactly what to expect.'
+            'Once we’ve agreed on the right path, we put it on paper in a detailed spec document, like an architect’s blueprint. We walk through it with you so there are no surprises. You’ll know exactly what’s being built, why, and exactly what it costs before anything starts. If the plan calls for wireframes or visuals, this is where we build them.'
           }
           stage={2}
           animDelay={0.4}
@@ -44,7 +44,7 @@ export const Process = () => {
         <ProcessTile
           title={'Build + Test'}
           description={
-            'Because of the hard work we’ve done together in Stage 2 of our process, we now have an approved design and clear technical description of the application, down to every button and click. Like the custom homebuilder, we are ready for construction.'
+            'With the plan approved, construction begins. Our engineers pair deep technical experience with modern, AI-assisted development, which means we move faster and keep costs lower, without cutting corners on the craft. You’ll participate in scheduled reviews and testing along the way to make sure the finished product hits the mark.'
           }
           stage={3}
           animDelay={0.6}
@@ -54,7 +54,7 @@ export const Process = () => {
         <ProcessTile
           title={'Support + Scale'}
           description={
-            'Launch is only the beginning of a great custom application development project. Changing technology frameworks and browser changes, as well as your business growth, create the need for periodic monitoring and upgrades. We are proactive about keeping your web application current; we plan for the future.'
+            'Launch is the beginning, not the finish line. Technology changes, and so will your business, so we stay on to monitor, adjust, and grow what we built together. We’re proud of the fact that our average client relationship lasts over eight years.'
           }
           stage={4}
           animDelay={0.8}

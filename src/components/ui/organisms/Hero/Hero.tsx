@@ -91,7 +91,7 @@ export const ScrollDownArrow = () => {
       className={
         'absolute bottom-[20px] z-10 hidden h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-[18px] bg-red text-white transition-all hover:scale-125 hover:bg-white hover:text-red lg:flex lg:bottom-[80px]'
       }
-      onClick={() => scrollToElementId('about')}
+      onClick={() => scrollToElementId('case-studies')}
     >
       <ChevronDown />
     </div>
