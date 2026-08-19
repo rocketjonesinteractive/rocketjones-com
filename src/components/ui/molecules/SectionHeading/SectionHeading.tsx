@@ -7,9 +7,11 @@ import { ReactNode } from 'react';
 export const SectionHeading = ({
   caption,
   title,
+  titleClassName = 'text-black',
 }: {
   caption: string;
   title: string | ReactNode;
+  titleClassName?: string;
 }) => {
   return (
     <AnimateOnScrollDiv
@@ -17,7 +19,7 @@ export const SectionHeading = ({
       className={'section-heading mb-16 text-center font-heading'}
     >
       <div className={'uppercase text-red'}>{caption}</div>
-      <div className={'px-2 text-[36px] leading-tight text-black [text-wrap:balance]'}>{title}</div>
+      <div className={`px-2 text-[36px] leading-tight [text-wrap:balance] ${titleClassName}`}>{title}</div>
       <div className="mx-auto mt-2 w-[60px] border-b-2 border-b-red"></div>
     </AnimateOnScrollDiv>
   );
