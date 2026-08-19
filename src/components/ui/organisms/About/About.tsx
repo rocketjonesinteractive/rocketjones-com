@@ -1,7 +1,6 @@
 import { Section } from '@/components/ui/atoms/Section/Section';
 import { SectionHeading } from '../../molecules/SectionHeading/SectionHeading';
 import { ReactNode } from 'react';
-import { Variants } from 'framer-motion';
 import Hourglass from '@/../public/img/icons/hourglass.svg';
 import Phone from '@/../public/img/icons/phone.svg';
 import UploadCloud from '@/../public/img/icons/upload-cloud.svg';
@@ -23,7 +22,7 @@ export const About = () => {
         <AboutTile
           title={'Advise'}
           description={
-            "You need a partner that listens, not another sales pitch. Before a direction gets recommended we spend time understanding your project, your needs and your constraints, because we believe there's no “one size fits all” in software."
+            'There’s no “one size fits all” in software. We spend time understanding your project and we explore the options before we make any recommendations.'
           }
           icon={<Phone />}
           animDelay={0}
@@ -31,7 +30,7 @@ export const About = () => {
         <AboutTile
           title={'Modernize'}
           description={
-            "Replace software that's slow and hard to maintain with tools built on a modern platform, aimed where your business is going. Connect your internal and cloud-based systems so information flows automatically."
+            'Replace software that’s slow and hard to maintain with tools built on a modern, scalable platform, aimed where your business is going.'
           }
           icon={<Hourglass />}
           animDelay={0.2}
@@ -54,60 +53,43 @@ const NameStory = () => {
   return (
     <AnimateOnScrollDiv variants={animationVariants.fadeInUp} className={'mt-16 w-full'}>
       <div className="border-greyOutline mx-4 border-2 bg-greyLight p-6 md:mx-8 md:p-9">
-        <div className={'text-center font-heading text-[27px] font-bold leading-tight text-black'}>
-          What&apos;s with the name?
+        <div className={'text-center'}>
+          <span
+            className={
+              'relative inline-block font-heading text-[27px] font-bold leading-tight text-black ' +
+              "md:before:absolute md:before:left-[-40px] md:before:top-1/2 md:before:h-[2px] md:before:w-[30px] md:before:bg-red md:before:content-[''] " +
+              "md:after:absolute md:after:right-[-40px] md:after:top-1/2 md:after:h-[2px] md:after:w-[30px] md:after:bg-red md:after:content-['']"
+            }
+          >
+            What&apos;s with the name?
+          </span>
         </div>
-        <div className={'mt-2 text-center text-sm text-black'}>Glad you asked.</div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-0">
+        <div className={'mt-2 text-center text-base text-black md:text-lg'}>Glad you asked.</div>
+        <div className="mx-auto mt-6 flex max-w-4xl flex-col gap-4">
           <NameHalf
             name={'Rocket'}
-            description={'is for the part of us that geeks out over clean code and hard problems.'}
-            variants={animationVariants.fadeInLeft}
+            description={'is the part of us that geeks out over clean code and solving hard problems.'}
           />
           <NameHalf
             name={'Jones'}
-            description={
-              'is for the part that still answers the phone and doesn’t make you feel dumb for asking a basic question.'
-            }
-            variants={animationVariants.fadeInRight}
-            className={'md:border-greyBorder md:border-l-2 md:pl-6'}
+            description={'is the part that still answers the phone and never makes you feel dumb when asking questions.'}
           />
         </div>
         <div className={'mt-7 text-center font-heading text-sm text-black md:text-base'}>
           Most dev agencies make you pick one.{' '}
-          <span className={'font-black text-red'}>We don&apos;t.</span>
+          <span className={'font-black text-black'}>We don&apos;t.</span>
         </div>
       </div>
     </AnimateOnScrollDiv>
   );
 };
 
-const NameHalf = ({
-  name,
-  description,
-  variants,
-  className,
-}: {
-  name: string;
-  description: string;
-  variants: Variants;
-  className?: string;
-}) => {
+const NameHalf = ({ name, description }: { name: string; description: string }) => {
   return (
-    <AnimateOnScrollDiv variants={variants} className={`md:pr-6 ${className ?? ''}`}>
-      <div className={'group text-center md:text-left'}>
-        <div
-          className={
-            'font-heading text-[24px] font-black uppercase leading-none tracking-tight text-black ' +
-            'transition-colors group-hover:text-red md:text-[30px]'
-          }
-        >
-          {name}
-        </div>
-        <div className="mx-auto mt-2 w-[30px] border-b-2 border-b-red transition-all group-hover:w-[60px] md:mx-0"></div>
-        <div className={'mt-3 text-sm leading-relaxed md:text-base'}>{description}</div>
-      </div>
-    </AnimateOnScrollDiv>
+    <div className={'text-center text-sm leading-relaxed text-black md:text-base'}>
+      <span className={'font-heading text-lg font-black leading-tight text-black md:text-xl'}>{name}</span>{' '}
+      {description}
+    </div>
   );
 };
 

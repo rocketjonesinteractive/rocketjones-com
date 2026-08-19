@@ -24,7 +24,7 @@ export const Process = () => {
         <ProcessTile
           title={'Explore + Imagine'}
           description={
-            'Some clients come to us knowing exactly what they need, but most come with a vision, a pain point, or an idea that hasn’t taken shape yet. We genuinely enjoy this stage: identifying the possibilities, defining the scope, and finding the right approach together. Most projects can be scoped quickly at no charge. Larger projects that need multiple planning sessions may involve a paid Discovery phase, but we’ll always tell you that upfront, before it starts.'
+            'Some clients come to us knowing exactly what they need, but most come with a vision or an idea that hasn’t taken shape. We genuinely enjoy this stage: identifying the possibilities, defining the scope, and finding the right approach together. Most projects can be scoped quickly at no charge. Larger projects may involve a paid Discovery phase, but we’ll always tell you that upfront.'
           }
           stage={1}
           animDelay={0.2}

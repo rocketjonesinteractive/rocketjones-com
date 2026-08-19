@@ -60,9 +60,8 @@ export const HeroSubheading = ({ children }: { children: ReactNode }) => {
 export const HeroDescriptionTop = () => {
   return (
     <div className={'mx-auto mb-10 max-w-5xl font-heading text-base leading-relaxed text-white/90 [text-wrap:balance] md:text-xl'}>
-      Most software asks you to bend your business to fit it when what you need is software that fits your business, your
-      future, your goals. With cutting edge development tools and a team of top-tier engineers, custom is more within
-      reach than it&apos;s ever been.
+      Give your team software built for your future. With cutting edge development tools and a team of seasoned
+      engineers, we put high quality, custom software within reach.
     </div>
   );
 };
