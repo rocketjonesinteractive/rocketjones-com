@@ -1,51 +1,38 @@
 import { Section } from '@/components/ui/atoms/Section/Section';
 import { SectionHeading } from '../../molecules/SectionHeading/SectionHeading';
-import { ReactNode } from 'react';
-import Hourglass from '@/../public/img/icons/hourglass.svg';
-import Phone from '@/../public/img/icons/phone.svg';
-import UploadCloud from '@/../public/img/icons/upload-cloud.svg';
 import { AnimateOnScrollDiv } from '@/components/ui/molecules/AnimateOnScrollDiv/AnimateOnScroll';
-import { addDelay, animationVariants } from '@/utils/animations';
+import { animationVariants } from '@/utils/animations';
 
 export const About = () => {
   return (
     <Section id={'about'}>
-      <SectionHeading caption={''} title={<>Who We Are</>} titleClassName={'text-grey'} />
-      <div className="mx-auto mb-6 max-w-3xl px-4 text-center text-base font-bold leading-relaxed [text-wrap:balance] md:text-lg">
-        Custom doesn&apos;t mean big or expensive. It means built around you.
-      </div>
-      <div className="mx-auto mb-16 max-w-5xl px-4 text-center text-base leading-relaxed [text-wrap:balance] md:text-lg">
-        For over 22 years, Rocket Jones has built custom software for growing businesses. From small, targeted
-        applications and integrations to large-scale platforms, we&apos;ve seen it and done it.
-      </div>
-      <div className="mx-4 grid grid-cols-1 items-start justify-center gap-8 md:mx-8 md:gap-16 lg:grid-cols-3">
-        <AboutTile
-          title={'Advise'}
-          description={
-            'There’s no “one size fits all” in software. We spend time understanding your project and we explore the options before we make any recommendations.'
-          }
-          icon={<Phone />}
-          animDelay={0}
-        />
-        <AboutTile
-          title={'Modernize'}
-          description={
-            'Replace software that’s slow and hard to maintain with tools built on a modern, scalable platform, aimed where your business is going.'
-          }
-          icon={<Hourglass />}
-          animDelay={0.2}
-        />
-        <AboutTile
-          title={'Sustain'}
-          description={
-            'Launch is the beginning, not the finish line. We plan and partner with you for the long-term, so you have the support you need as your business grows.'
-          }
-          icon={<UploadCloud />}
-          animDelay={0.4}
-        />
-      </div>
+      <SectionHeading caption={''} title={<>Who We Are</>} />
+      <Intro />
       <NameStory />
     </Section>
+  );
+};
+
+const Intro = () => {
+  return (
+    <div className="grid w-full items-center gap-8 px-4 md:px-8 lg:grid-cols-[5fr_7fr] lg:gap-16">
+      <AnimateOnScrollDiv variants={animationVariants.fadeInLeft}>
+        <div
+          className={
+            'border-b-2 border-red pb-6 text-center font-heading text-2xl font-bold leading-tight text-black ' +
+            '[text-wrap:balance] md:text-3xl lg:border-b-0 lg:border-l-2 lg:pb-0 lg:pl-8 lg:text-left'
+          }
+        >
+          Custom doesn&apos;t mean big or expensive. It means built around you.
+        </div>
+      </AnimateOnScrollDiv>
+      <AnimateOnScrollDiv variants={animationVariants.fadeInRight}>
+        <div className={'text-center text-base leading-relaxed [text-wrap:balance] md:text-lg lg:text-left'}>
+          For over 22 years, Rocket Jones has built custom software for growing businesses. From small, targeted
+          applications and integrations to large-scale platforms, we&apos;ve seen it and done it.
+        </div>
+      </AnimateOnScrollDiv>
+    </div>
   );
 };
 
@@ -90,29 +77,5 @@ const NameHalf = ({ name, description }: { name: string; description: string }) 
       <span className={'font-heading text-lg font-black leading-tight md:text-xl'}>{name}</span>{' '}
       {description}
     </div>
-  );
-};
-
-const AboutTile = ({
-  title,
-  description,
-  icon,
-  animDelay,
-}: {
-  title: string;
-  description: string;
-  icon: ReactNode;
-  animDelay?: number;
-}) => {
-  return (
-    <AnimateOnScrollDiv variants={addDelay(animationVariants.aboutTile, animDelay ?? 0)}>
-      <div className="flex gap-4">
-        <div>{icon}</div>
-        <div>
-          <div className="mb-2 mt-1 font-heading font-medium uppercase tracking-wider">{title}</div>
-          <div className={'text-sm leading-relaxed'}>{description}</div>
-        </div>
-      </div>
-    </AnimateOnScrollDiv>
   );
 };
